@@ -144,31 +144,7 @@ langOptions.forEach(option => {
     });
 });
 
-// 数字动画
-const animateNumber = (element, start, end, duration) => {
-    const range = end - start;
-    const increment = range / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= end) {
-            current = end;
-            clearInterval(timer);
-        }
-        
-        const value = Math.floor(current);
-        if (element.textContent.includes('%')) {
-            element.textContent = value + '%';
-        } else if (element.textContent.includes('h')) {
-            element.textContent = value + 'h';
-        } else if (element.textContent.includes('+')) {
-            element.textContent = value + '+';
-        } else {
-            element.textContent = value;
-        }
-    }, 16);
-};
+
 
 // 交叉观察器用于触发动画
 const observerOptions = {
@@ -196,7 +172,6 @@ const observer = new IntersectionObserver((entries) => {
                     finalNumber = parseInt(text);
                 }
                 
-                animateNumber(target, 0, finalNumber, 2000);
                 observer.unobserve(target);
             }
             

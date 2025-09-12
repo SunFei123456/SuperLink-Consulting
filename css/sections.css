@@ -1,5 +1,226 @@
 
 
+/* About Section Enhancements */
+.about {
+  background: var(--light-gray);
+}
+
+.zhengnan{
+    position: absolute;
+    left: 10px;
+    width: 300px;
+}
+
+
+/* Brand Mission Styles */
+
+
+.mission-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.mission-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.mission-content {
+  color: var(--medium-gray);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.core-values {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.03), rgba(255, 138, 101, 0.03));
+  border-radius: 15px;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.value-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.value-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.value-tag {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.value-content p {
+  color: var(--medium-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Founder Profile Enhanced Styles */
+.founder-profile {
+  background: white;
+  padding: 3rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.founder-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.founder-section h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 107, 53, 0.1);
+}
+
+/* Founder Highlights */
+.founder-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.02), rgba(255, 138, 101, 0.02));
+  border-radius: 12px;
+  border: 1px solid rgba(255, 107, 53, 0.08);
+  transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.474), rgba(255, 137, 101, 0.973));
+  border-color: rgba(255, 107, 53, 0.15);
+  
+}
+
+/* 悬浮 的时候 .highlight-content span  还有 标题 变为 #fff */
+.highlight-item:hover .highlight-content span {
+  color: #fff;
+}
+.highlight-item:hover strong{
+  color: #fff;
+}
+.highlight-icon {
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-content strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 0.3rem;
+}
+
+.highlight-content span {
+  color: var(--medium-gray);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* Hong Kong Experience Styles */
+.founder-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary-orange), rgba(255, 107, 53, 0.3));
+}
+
+
+
+.insight-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.experience-insight p {
+  color: var(--dark-gray);
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Ring Animation for Avatar */
+@keyframes ring-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+}
+
 /* Feature Card Enhancements */
 .feature-tag {
     position: absolute;
@@ -17,34 +238,10 @@
     background: white;
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: var(--shadow-light);
     border: 1px solid rgba(255, 107, 53, 0.1);
     text-align: center;
 }
 
-.founder-avatar {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    border-radius: 50%;
-    background: var(--light-gray);
-}
-
-.avatar-ring {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 3px solid rgba(255, 107, 53, 0.3);
-    border-radius: 50%;
-    animation: ring-pulse 3s ease-in-out infinite;
-}
 
 .founder-info h3 {
     font-size: 1.4rem;
@@ -87,7 +284,6 @@
     background: white;
     border-radius: 20px;
     padding: 3rem;
-    box-shadow: var(--shadow-light);
     border: 1px solid rgba(255, 107, 53, 0.1);
     max-width: 800px;
     margin: 0 auto;
@@ -109,7 +305,6 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    box-shadow: var(--shadow-light);
 }
 
 .profile-content h3 {
@@ -167,7 +362,6 @@
     background: white;
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: var(--shadow-light);
     border: 1px solid rgba(255, 107, 53, 0.1);
     text-align: center;
 }
