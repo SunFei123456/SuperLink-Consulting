@@ -4,6 +4,8 @@
 @import './sections.css';
 @import './mobile.css';
 
+@import './team.css';
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -110,12 +112,12 @@
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-orange);
-    border: 2px solid var(--primary-orange);
+    color: var( --primary-red);
+    border: 2px solid var( --primary-red);
 }
 
 .btn-outline:hover {
-    background: var(--primary-orange);
+    background: var( --primary-red);
     color: white;
     transform: translateY(-2px);
 }
@@ -169,7 +171,7 @@
     background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 101, 0.1));
     border: 1px solid rgba(255, 107, 53, 0.2);
     border-radius: 50px;
-    color: var(--primary-orange);
+    color: var( --primary-red);
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -182,7 +184,7 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--dark-gray), var(--primary-orange));
+    background: linear-gradient(135deg, var(--dark-gray), var( --primary-red));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -217,7 +219,7 @@
     display: block;
     font-size: 1.2rem;
     font-weight: 800;
-    color: var(--primary-orange);
+    color: var( --primary-red);
     line-height: 1;
 }
 
@@ -299,7 +301,7 @@ section {
     background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 101, 0.1));
     border: 1px solid rgba(255, 107, 53, 0.2);
     border-radius: 50px;
-    color: var(--primary-orange);
+    color: var( --primary-red);
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -533,7 +535,7 @@ section {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--primary-orange);
+    color: var( --primary-red);
     font-weight: bold;
 }
 
@@ -730,7 +732,7 @@ section {
 }
 
 .member-role {
-    color: var(--primary-orange);
+    color: var( --primary-red);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -839,7 +841,7 @@ section {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-orange);
+    border-color: var( --primary-red);
     background: white;
 }
 
@@ -913,7 +915,7 @@ section {
 }
 
 .social-link:hover {
-    background: var(--primary-orange);
+    background: var( --primary-red);
     color: white;
     transform: translateY(-2px);
 }
@@ -939,7 +941,7 @@ section {
 }
 
 .link-group a:hover {
-    color: var(--primary-orange);
+    color: var( --primary-red);
 }
 
 .footer-bottom {
@@ -963,7 +965,7 @@ section {
 }
 
 .footer-legal a:hover {
-    color: var(--primary-orange);
+    color: var( --primary-red);
 }
 
 /* 动画 */

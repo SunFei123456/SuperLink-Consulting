@@ -66,7 +66,7 @@
 }
 
 .nav-link:hover {
-    color: var(--primary-orange);
+    color: var( --primary-red);
     background: rgba(255, 107, 53, 0.1);
     transform: translateY(-1px);
 }
@@ -113,12 +113,12 @@
 }
 
 .lang-option.active {
-    color: var(--primary-orange);
+    color: var( --primary-red);
     font-weight: 600;
 }
 
 .lang-option:hover {
-    color: var(--primary-orange);
+    color: var( --primary-red);
 }
 
 .lang-divider {
@@ -137,7 +137,7 @@
     padding: 6px 12px;
     background: rgba(255, 107, 53, 0.1);
     border-radius: 15px;
-    color: var(--primary-orange);
+    color: var( --primary-red);
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 500;
@@ -145,7 +145,7 @@
 }
 
 .download-link:hover {
-    background: var(--primary-orange);
+    background: var( --primary-red);
     color: white;
     transform: translateY(-1px);
 }
@@ -160,7 +160,7 @@
 .nav-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--primary-orange);
+    background: var( --primary-red);
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -168,7 +168,7 @@
 
 /* Navigation Active State */
 .nav-link.active {
-    color: var(--primary-orange);
+    color: var( --primary-red);
     background: rgba(255, 107, 53, 0.15);
     font-weight: 600;
 }
