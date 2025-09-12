@@ -1,0 +1,43 @@
+
+.target-clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.client-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.client-card.featured {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.client-card .card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.client-card .card-content p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .target-clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-card.featured {
+        transform: scale(1);
+    }
+}
