@@ -1,7 +1,8 @@
 @import './color.css';
 @import './common.css';
-@import './nav.css'
-;
+@import './nav.css';
+@import './sections.css';
+@import './mobile.css';
 
 .container {
     max-width: 1200px;
@@ -54,93 +55,6 @@
     animation-delay: 6s;
 }
 
-/* 导航栏 */
-.navbar {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: 800px;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 107, 53, 0.1);
-    border-radius: 50px;
-    box-shadow: var(--shadow-light);
-    transition: all 0.3s ease;
-    padding: 8px;
-}
-
-.navbar:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateX(-50%) translateY(-2px);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-    max-width: none;
-}
-
-.nav-brand h2 {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-right: 2rem;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 107, 53, 0.05);
-    padding: 8px 20px;
-    border-radius: 25px;
-    border: 1px solid rgba(255, 107, 53, 0.1);
-}
-
-.nav-link {
-    color: var(--dark-gray);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-.nav-link:hover {
-    color: var(--primary-orange);
-    background: rgba(255, 107, 53, 0.1);
-    transform: translateY(-1px);
-}
-
-.nav-link::after {
-    display: none;
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--primary-orange);
-    border-radius: 2px;
-    transition: 0.3s;
-}
 
 /* 按钮样式 */
 .btn {
@@ -1079,53 +993,8 @@ section {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .navbar {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        transform: none;
-        width: auto;
-        max-width: none;
-    }
-    
-    .navbar .container {
-        padding: 8px 16px;
-    }
-    
-    .nav-brand h2 {
-        font-size: 1.4rem;
-        margin-right: 1rem;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.98);
-        border-radius: 20px;
-        border: 1px solid rgba(255, 107, 53, 0.1);
-        margin-top: 8px;
-        padding: 16px;
-        gap: 8px;
-        box-shadow: var(--shadow-medium);
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .nav-link {
-        padding: 12px 16px;
-        text-align: center;
-        border-radius: 12px;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
+
+
     
     .hero .container {
         grid-template-columns: 1fr;

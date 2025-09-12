@@ -1,0 +1,497 @@
+
+
+/* Feature Card Enhancements */
+.feature-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.founder-profile {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+}
+
+.founder-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    background: var(--light-gray);
+}
+
+.avatar-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid rgba(255, 107, 53, 0.3);
+    border-radius: 50%;
+    animation: ring-pulse 3s ease-in-out infinite;
+}
+
+.founder-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray);
+}
+
+.founder-title {
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.founder-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: left;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+}
+
+.highlight-icon {
+    font-size: 1rem;
+}
+
+/* Target Clients */
+.target-clients {
+    background: var(--light-gray);
+}
+
+.target-client-card {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.client-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.profile-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+    min-width: 80px;
+}
+
+.detail-value {
+    color: var(--medium-gray);
+    line-height: 1.5;
+}
+
+/* Service Pricing */
+.service-pricing {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.service-pricing h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+}
+
+.pricing-card.featured {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 138, 101, 0.05));
+    border: 2px solid rgba(255, 107, 53, 0.2);
+    transform: scale(1.05);
+}
+
+.pricing-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    margin-bottom: 1rem;
+}
+
+.pricing-card p {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+/* Guide Section */
+.guide {
+    background: white;
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.risk-section h3,
+.compliance-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.risk-card {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 138, 101, 0.05));
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+}
+
+.risk-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.risk-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.risk-card p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.compliance-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+}
+
+.compliance-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.compliance-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.compliance-item p {
+    color: var(--medium-gray);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Team Section */
+.team {
+    background: var(--light-gray);
+}
+
+.member-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    text-align: left;
+}
+
+.experience-icon {
+    font-size: 1rem;
+}
+
+/* Advantages Section */
+.advantages {
+    background: white;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.advantage-card {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.02), rgba(255, 138, 101, 0.02));
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+    box-shadow: var(--shadow-light);
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.advantage-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.advantage-card p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.advantage-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.advantage-stats .stat {
+    text-align: center;
+}
+
+.advantage-stats .stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    line-height: 1;
+}
+
+.advantage-stats .stat-label {
+    color: var(--medium-gray);
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.competitive-analysis {
+    margin-top: 4rem;
+}
+
+.competitive-analysis h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-item {
+    padding: 1rem;
+    border-right: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+}
+
+.comparison-item:last-child {
+    border-right: none;
+}
+
+.comparison-item.highlight {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 101, 0.1));
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+/* Contact Enhancements */
+.qr-code-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 107, 53, 0.1);
+    text-align: center;
+}
+
+.qr-code-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+}
+
+.qr-placeholder {
+    width: 120px;
+    height: 120px;
+    background: var(--light-gray);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(255, 107, 53, 0.3);
+}
+
+.qr-placeholder span {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.qr-placeholder p {
+    font-size: 0.8rem;
+    color: var(--medium-gray);
+    margin: 0;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.form select {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 107, 53, 0.1);
+    border-radius: 15px;
+    background: var(--light-gray);
+    color: var(--dark-gray);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form select:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    background: white;
+}

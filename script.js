@@ -8,9 +8,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+            
+            // 移动端关闭菜单
+            const navMenu = document.querySelector('.nav-menu');
+            const navToggle = document.querySelector('.nav-toggle');
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
         }
     });
 });
+
+// 导航栏当前位置高亮
+function updateActiveNavItem() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+}
 
 // 导航栏滚动效果
 let lastScrollTop = 0;
@@ -19,12 +49,13 @@ window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     if (scrollTop > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(255, 107, 53, 0.1)';
+    //  暂定
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+    //   暂定
     }
+    
+    // 更新当前导航项
+    updateActiveNavItem();
     
     lastScrollTop = scrollTop;
 });
@@ -33,12 +64,85 @@ window.addEventListener('scroll', () => {
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
+console.log('navToggle:', navToggle);
+console.log('navMenu:', navMenu);
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        console.log('点击了汉堡菜单');
+        
+        // 切换菜单状态
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        console.log('navToggle.classList:', navToggle.classList.toString());
+        console.log('navMenu.classList:', navMenu.classList.toString());
+        
+        // 手动设置汉堡菜单动画
+        const spans = navToggle.querySelectorAll('span');
+        if (navToggle.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[1].style.transform = 'scale(0)';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '1';
+            spans[1].style.transform = '';
+            spans[2].style.transform = '';
+        }
+    });
+    
+    // 点击菜单项关闭菜单
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                
+                // 重置汉堡菜单样式
+                const spans = navToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[1].style.transform = '';
+                spans[2].style.transform = '';
+            }
+        });
+    });
+    
+    // 点击外部关闭菜单
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                
+                // 重置汉堡菜单样式
+                const spans = navToggle.querySelectorAll('span');
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '1';
+                spans[1].style.transform = '';
+                spans[2].style.transform = '';
+            }
+        }
     });
 }
+
+// 语言切换功能
+const langOptions = document.querySelectorAll('.lang-option');
+langOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        langOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+        
+        // 这里可以添加语言切换逻辑
+        console.log(`切换语言为: ${option.textContent}`);
+    });
+});
 
 // 数字动画
 const animateNumber = (element, start, end, duration) => {
@@ -259,82 +363,6 @@ function showNotification(message, type = 'success') {
         }, 300);
     }, 3000);
 }
-
-// 鼠标跟随效果
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-
-// 创建自定义光标
-const cursor = document.createElement('div');
-cursor.className = 'custom-cursor';
-cursor.innerHTML = '<div class="cursor-dot"></div><div class="cursor-ring"></div>';
-
-const cursorStyle = document.createElement('style');
-cursorStyle.textContent = `
-    .custom-cursor {
-        position: fixed;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: difference;
-    }
-    .cursor-dot {
-        width: 8px;
-        height: 8px;
-        background: #FF6B35;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
-    .cursor-ring {
-        width: 30px;
-        height: 30px;
-        border: 2px solid #FF6B35;
-        border-radius: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-    }
-    .custom-cursor.hover .cursor-ring {
-        width: 50px;
-        height: 50px;
-        opacity: 0.5;
-    }
-`;
-
-cursor.appendChild(cursorStyle);
-document.body.appendChild(cursor);
-
-function updateCursor() {
-    cursorX += (mouseX - cursorX) * 0.1;
-    cursorY += (mouseY - cursorY) * 0.1;
-    
-    cursor.style.left = cursorX + 'px';
-    cursor.style.top = cursorY + 'px';
-    
-    requestAnimationFrame(updateCursor);
-}
-
-updateCursor();
-
-// 光标悬停效果
-document.querySelectorAll('a, button, .portfolio-item').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
-    });
-    
-    el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-    });
-});
 
 // 页面加载完成后的动画
 window.addEventListener('load', () => {
