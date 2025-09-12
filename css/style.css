@@ -464,6 +464,17 @@ section {
     border: 1px solid rgba(255, 107, 53, 0.1);
     overflow: hidden;
 }
+   .service-card .sub {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        padding-left: 1rem;
+        border-left: 3px solid #fa504d;
+        line-height: 1.4;
+ }
+
+
 
 .service-card::before {
     content: '';

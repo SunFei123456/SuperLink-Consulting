@@ -1,0 +1,117 @@
+/* services-details.css - User's Grid Design */
+.service-details-section {
+    padding: 160px 0;
+    background-color: #f8f9fa;
+}
+
+.service-details-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.service-details-section .section-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-details-section .section-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+}
+
+.detail-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 20px 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-header h3 {
+    color: rgba(200, 68, 66, 0.9);
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-number {
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(200, 68, 66, 0.12);
+    z-index: 0;
+    user-select: none;
+}
+
+.card-content {
+    padding: 30px 25px;
+    flex-grow: 1;
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-content ul li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    color: #555;
+    padding-left: 22px;
+    position: relative;
+}
+
+.card-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+.card-content ul li::before {
+    content: '•';
+    color: #fa504d;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    top: 1px;
+}
+
+.card-content ul ul {
+    padding-left: 15px;
+    margin-top: 8px;
+}
+
+.card-content ul ul li {
+    font-size: 0.95em;
+}
+
+/* Make the 8th card span 2 columns for a more elegant grid */
+@media screen and (min-width: 1200px) {
+    .detail-card:nth-child(8) {
+        grid-column: span 2;
+    }
+}

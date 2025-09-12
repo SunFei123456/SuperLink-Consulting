@@ -373,6 +373,12 @@
     color: var(--dark-gray);
 }
 
+.risk-card .risk-card-text{
+       color: var(--medium-gray);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
 .risk-card p {
     color: var(--medium-gray);
     line-height: 1.6;

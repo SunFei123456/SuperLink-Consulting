@@ -10,6 +10,78 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/target-clients.css" />
+    <style>
+      /* 工具提示样式 */
+      .tooltip-container {
+        position: relative;
+        display: inline-block;
+      }
+      .tooltip-trigger {
+        position: relative;
+        color: #ff6b35;
+        font-weight: 600;
+        cursor: pointer;
+        border-bottom: 2px dotted #ff6b35;
+        transition: all 0.3s ease;
+      }
+      .tooltip-trigger:hover {
+        color: #ff4500;
+        border-bottom-color: #ff4500;
+      }
+      .tooltip-card {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        padding: 0;
+        min-width: 400px;
+        max-width: 500px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+      .tooltip-trigger:hover + .tooltip-card,
+      .tooltip-card:hover {
+        opacity: 1;
+        visibility: visible;
+      }
+      .tooltip-header {
+        background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+
+        padding: 16px 20px;
+        border-radius: 12px 12px 0 0;
+        margin: 0;
+      }
+      .tooltip-header h4 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+      }
+      .tooltip-content {
+        padding: 20px;
+      }
+      .license-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .license-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .license-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -342,9 +414,36 @@
                     <span>⚠️</span>
                   </div>
                   <h4>违规违法风险</h4>
-                  <p>
-                    公司注册与经营合规风险高。例如，在香港开设职业介绍所必须持牌经营，否则可能面临35万港币罚款和3年监禁。此外，还需遵守《公司条例》和《雇佣条例》。
-                  </p>
+                  <div class="risk-card-text">
+                    在香港开公司和雇佣员工主要需遵守《公司条例》和《雇佣条例》，包括注册资本、董事要求、强积金供款等，在某些
+                    <div class="tooltip-container">
+                      <span class="tooltip-trigger">专业领域</span>
+                      <!-- 牌照要求悬浮卡片 -->
+                      <div class="tooltip-card">
+                        <div class="tooltip-header">
+                          <h4>需要申请牌照的行业（按监管严格程度排序）</h4>
+                        </div>
+                        <div class="tooltip-content">
+                          <ul class="license-list">
+                            <li>
+                              金融服务业（证监会1-10号牌照、放债人牌照等）
+                            </li>
+                            <li>餐饮业（食肆牌照、酒牌等）</li>
+                            <li>教育行业（学校注册证明书）</li>
+                            <li>旅游业（旅行代理商牌照）</li>
+                            <li>职业介绍所（劳工处牌照）</li>
+                            <li>通讯行业（电讯牌照）</li>
+                            <li>医疗及健康服务（医生执业证书）</li>
+                            <li>贸易公司（进出口许可证）</li>
+                            <li>零售业务（中药材/动物寄养牌照）</li>
+                            <li>活动管理（公众娱乐/彩票牌照）</li>
+                            <li>专业服务（律师/会计师执照）</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    的业务，需要申请执照
+                  </div>
                 </div>
                 <div class="risk-card">
                   <div class="risk-icon">
@@ -581,7 +680,7 @@
                     <td>公司注册服务</td>
                     <td class="highlight">
                       <strong>8,000 港币</strong
-                      ><br />含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
+                      >含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
                     </td>
                     <td>
                       <strong>10,000+ 港币</strong
@@ -602,7 +701,7 @@
                   <tr>
                     <td>会计服务</td>
                     <td class="highlight">
-                      <strong>10,000 港币/年</strong><br />财务报表编制 +
+                      <strong>10,000 港币/年</strong>财务报表编制 +
                       税务申报 + 年度审计协助
                     </td>
                     <td>
@@ -715,7 +814,7 @@
               </table>
             </div>
             <div class="details-button-wrapper">
-              <a href="#" class="btn btn-primary">
+              <a href="services-details.html" class="btn btn-primary">
                 <span>了解详细</span>
                 <div class="btn-glow"></div>
               </a>
