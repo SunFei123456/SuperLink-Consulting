@@ -367,6 +367,7 @@
                 this.tocOverlay = document.getElementById('toc-overlay');
                 this.headings = [];
                 this.activeLink = null;
+                this.isScrolling = false; // 添加滚动状态标志
                 
                 this.init();
             }
@@ -379,29 +380,17 @@
             
             // 生成目录
             generateTOC() {
-                const headings = document.querySelectorAll('.guide-content h2, .guide-content h3');
+                const headings = document.querySelectorAll('.guide-content h2');
                 let tocHTML = '<ul class="toc-list">';
-                let currentH2 = null;
                 
                 headings.forEach((heading, index) => {
                     const id = this.generateId(heading.textContent, index);
                     heading.id = id;
                     this.headings.push(heading);
                     
-                    if (heading.tagName === 'H2') {
-                        if (currentH2) {
-                            tocHTML += '</ul></li>';
-                        }
-                        tocHTML += `<li><a href="#${id}" class="toc-link toc-h2">${heading.textContent}</a><ul class="toc-sub-list">`;
-                        currentH2 = heading;
-                    } else if (heading.tagName === 'H3' && currentH2) {
-                        tocHTML += `<li><a href="#${id}" class="toc-link toc-h3">${heading.textContent}</a></li>`;
-                    }
+                    tocHTML += `<li><a href="#${id}" class="toc-link toc-h2">${heading.textContent}</a></li>`;
                 });
                 
-                if (currentH2) {
-                    tocHTML += '</ul></li>';
-                }
                 tocHTML += '</ul>';
                 
                 this.tocContainer.innerHTML = tocHTML;
@@ -440,8 +429,19 @@
                         const targetElement = document.getElementById(targetId);
                         
                         if (targetElement) {
-                            this.smoothScrollTo(targetElement);
+                            // 禁用自动检测一段时间，避免冲突
+                            this.isScrolling = true;
+                            
+                            // 立即设置活跃链接
                             this.setActiveLink(e.target);
+                            
+                            // 滚动到目标位置
+                            this.smoothScrollTo(targetElement);
+                            
+                            // 滚动完成后重新启用自动检测
+                            setTimeout(() => {
+                                this.isScrolling = false;
+                            }, 1000);
                             
                             // 移动端自动关闭目录
                             if (window.innerWidth <= 768) {
@@ -493,22 +493,92 @@
             // 观察标题元素
             observeHeadings() {
                 const observer = new IntersectionObserver((entries) => {
+                    // 如果正在手动滚动，不要处理
+                    if (this.isScrolling) return;
+                    
+                    // 找到当前最靠近视口顶部的标题
+                    let activeEntry = null;
+                    let minDistance = Infinity;
+                    
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            const id = entry.target.id;
-                            const link = this.tocContainer.querySelector(`a[href="#${id}"]`);
-                            if (link) {
-                                this.setActiveLink(link);
+                            const rect = entry.boundingClientRect;
+                            const distance = Math.abs(rect.top);
+                            
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                activeEntry = entry;
                             }
                         }
                     });
+                    
+                    // 如果没有交叉的元素，查找最近的上方元素
+                    if (!activeEntry) {
+                        const h2Headings = document.querySelectorAll('.guide-content h2');
+                        const scrollTop = window.pageYOffset;
+                        
+                        for (let i = h2Headings.length - 1; i >= 0; i--) {
+                            const heading = h2Headings[i];
+                            if (heading.offsetTop <= scrollTop + 150) {
+                                const id = heading.id;
+                                const link = this.tocContainer.querySelector(`a[href="#${id}"]`);
+                                if (link) {
+                                    this.setActiveLink(link);
+                                }
+                                return;
+                            }
+                        }
+                    } else {
+                        const id = activeEntry.target.id;
+                        const link = this.tocContainer.querySelector(`a[href="#${id}"]`);
+                        if (link) {
+                            this.setActiveLink(link);
+                        }
+                    }
                 }, {
-                    rootMargin: '-20% 0px -70% 0px'
+                    rootMargin: '-10% 0px -80% 0px',
+                    threshold: [0, 0.1, 0.5, 1]
                 });
                 
-                this.headings.forEach(heading => {
+                // 只观导h2标题
+                const h2Headings = document.querySelectorAll('.guide-content h2');
+                h2Headings.forEach(heading => {
                     observer.observe(heading);
                 });
+                
+                // 添加滚动事件监听器作为备用
+                let scrollTimeout;
+                window.addEventListener('scroll', () => {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        // 如果正在手动滚动，不要处理
+                        if (!this.isScrolling) {
+                            this.updateActiveOnScroll();
+                        }
+                    }, 100);
+                });
+            }
+            
+            // 备用的滚动检测方法
+            updateActiveOnScroll() {
+                const h2Headings = document.querySelectorAll('.guide-content h2');
+                const scrollTop = window.pageYOffset + 150; // 加上一些偏移量
+                
+                let activeHeading = null;
+                
+                h2Headings.forEach(heading => {
+                    if (heading.offsetTop <= scrollTop) {
+                        activeHeading = heading;
+                    }
+                });
+                
+                if (activeHeading) {
+                    const id = activeHeading.id;
+                    const link = this.tocContainer.querySelector(`a[href="#${id}"]`);
+                    if (link && !link.classList.contains('active')) {
+                        this.setActiveLink(link);
+                    }
+                }
             }
         }
         
