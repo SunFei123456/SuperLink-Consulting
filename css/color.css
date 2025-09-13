@@ -10,7 +10,7 @@
     --dark-gray: #212529;
     --gradient-primary: linear-gradient(135deg, #FF6B35, #FF8A65);
     --gradient-secondary: linear-gradient(135deg, #FFB74D, #FFCC80);
-    --shadow-light: 0 4px 20px rgba(255, 73, 53, 0.1);
+    --shadow-light: 0 4px 20px rgba(255, 57, 35, 0.1);
     --shadow-medium: 0 8px 30px rgba(255, 107, 53, 0.2);
     --shadow-heavy: 0 12px 40px rgba(255, 107, 53, 0.3);
 }

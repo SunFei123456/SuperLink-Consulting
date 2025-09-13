@@ -370,7 +370,6 @@
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--dark-gray);
 }
 
 .risk-card .risk-card-text{
@@ -551,48 +550,6 @@
     display: block;
 }
 
-/* Contact Enhancements */
-.qr-code-section {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 107, 53, 0.1);
-    text-align: center;
-}
-
-.qr-code-section h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--dark-gray);
-}
-
-.qr-code {
-    display: flex;
-    justify-content: center;
-}
-
-.qr-placeholder {
-    width: 120px;
-    height: 120px;
-    background: var(--light-gray);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed rgba(255, 107, 53, 0.3);
-}
-
-.qr-placeholder span {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.qr-placeholder p {
-    font-size: 0.8rem;
-    color: var(--medium-gray);
-    margin: 0;
-}
 
 .contact-form h3 {
     font-size: 1.5rem;
@@ -621,9 +578,135 @@
     background: white;
 }
 
+/* Hide mobile cards on desktop */
+.comparison-table-mobile,
+.price-comparison-mobile,
+.housekeeper-price-mobile {
+  display: none;
+}
+
+/* Mobile responsive table styles */
 @media (max-width: 768px) {
   .table-responsive-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hide tables and show cards on mobile */
+  .comparison-table,
+  .price-comparison-table,
+  .housekeeper-price-table {
+    display: none;
+  }
+  
+  /* Show mobile card layouts */
+  .comparison-table-mobile,
+  .price-comparison-mobile,
+  .housekeeper-price-mobile {
+    display: block;
+  }
+  
+  .mobile-table-card {
+    background: white;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+  }
+  
+  .mobile-card-header {
+    background: #fa504d;
+    color: white;
+    padding: 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    border-radius: 12px 12px 0 0;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  
+  .mobile-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+  }
+  
+  .mobile-card-row:last-child {
+    border-bottom: none;
+  }
+  
+  .mobile-card-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+    flex: 0 0 40%;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-card-value {
+    flex: 1;
+    text-align: right;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .mobile-card-value.highlight {
+    background: #fa504d38;
+    color: var(--dark-gray);
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  .mobile-card-value strong {
+    color: var(--primary-red);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .mobile-card-merged {
+    background: #fff5f0;
+    border-left: 4px solid var(--primary-red);
+  }
+}
+
+/* Extra mobile optimizations for very small screens */
+@media (max-width: 480px) {
+  .mobile-table-card {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .mobile-card-header {
+    padding: 0.75rem;
+    margin: -1rem -1rem 0.75rem -1rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-card-label {
+    flex: none;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .mobile-card-value {
+    flex: none;
+    text-align: left;
+    font-size: 0.85rem;
+  }
+  
+  .mobile-card-value.highlight {
+    padding: 0.4rem;
+    margin-top: 0.25rem;
   }
 }
 
