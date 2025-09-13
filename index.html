@@ -139,12 +139,12 @@
               专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式HR解决方案
             </p>
             <div class="hero-actions">
-              <button class="btn btn-primary">
+              <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
                 <span>立即咨询</span>
                 <div class="btn-glow"></div>
               </button>
-              <button class="btn btn-outline">
-                <span>下载合规手册</span>
+              <button class="btn btn-outline" onclick="window.location.href='practical-guide.html';">
+                <span>查看合规手册</span>
               </button>
             </div>
             <div class="hero-stats">
@@ -1165,6 +1165,33 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <style>
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ff6b35;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  .back-to-top:hover {
+    background: #ff4500;
+    transform: translateY(-3px);
+  }
+</style>
+<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+  ↑
+</div>
+<script src="script.js"></script>
   </body>
 </html>
