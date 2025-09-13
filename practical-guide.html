@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实战指南 - SuperLink Consulting</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/practical-guide.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-box">
+        <div class="nav-brand">
+          <a href="index.html"><img src="./images/logo-nav-1.png" alt="SuperLink Consulting" /></a>
+        </div>
+        <div class="nav-menu">
+          <a href="index.html#home" class="nav-link">首页</a>
+          <a href="index.html#about" class="nav-link">关于我们</a>
+          <a href="index.html#target-clients" class="nav-link">服务对象</a>
+          <a href="index.html#services" class="nav-link">核心服务</a>
+          <a href="index.html#guide" class="nav-link">香港落地指南</a>
+          <a href="index.html#practical-guide" class="nav-link">实战指南</a>
+          <a href="index.html#team" class="nav-link">专家团队</a>
+          <a href="index.html#advantages" class="nav-link">竞争优势</a>
+          <a href="index.html#contact" class="nav-link cta-button">立即咨询</a>
+        </div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="practical-guide-section" class="practical-guide-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">实战指南</h1>
+                    <p class="section-subtitle">香港 HR 合规相关</p>
+                </div>
+                
+                <!-- 目录导航容器 -->
+                <div class="guide-layout">
+                    <!-- 移动端目录按钮 -->
+                    <button class="mobile-toc-toggle" id="mobile-toc-toggle">
+                        <i data-lucide="menu" class="lucide-icon"></i>
+                        <span>目录</span>
+                    </button>
+                    
+                    <!-- 目录导航 -->
+                    <nav class="table-of-contents" id="table-of-contents">
+                        <div class="toc-header">
+                            <h3>实战指南目录</h3>
+                            <button class="toc-close" id="toc-close">
+                                <i data-lucide="x" class="lucide-icon"></i>
+                            </button>
+                        </div>
+                        <div class="toc-content" id="toc-content">
+                            <!-- 目录将由 JavaScript 动态生成 -->
+                        </div>
+                    </nav>
+                    
+                    <!-- 遮罩层（移动端） -->
+                    <div class="toc-overlay" id="toc-overlay"></div>
+                
+                <div class="guide-content">
+                    <div class="guide-subsection">
+                        <h2>香港强积金（MPF）供款全流程指南</h2>
+                        <h3>1. 基本规则</h3>
+                        <ul>
+                            <li><strong>对象：</strong>雇主必为 18-65 岁雇员供款；雇员月收入≥HK$7,100 需自供（2023 年标准）</li>
+                            <li><strong>比例：</strong>雇主 / 雇员各缴 5%，基数范围 HK$7,100-HK$30,000（超上限按 HK$30,000 计）</li>
+                        </ul>
+                        <h3>2. 关键注意事项</h3>
+                        <ul>
+                            <li><strong>截止期：</strong>当月第 10 个工作日前完成，逾期补缴 + 5%-10% 罚款</li>
+                            <li><strong>特殊场景：</strong>离职员工（最后工作日当月按比例供款）；临时工（连续雇满 60 天需补缴前期 MPF）</li>
+                        </ul>
+                        <h3>3. 每月操作步骤</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>步骤</th>
+                                    <th>时间</th>
+                                    <th>核心动作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. 数据准备</td>
+                                    <td>每月 1-5 日</td>
+                                    <td>核对在职 / 离职员工，薪资变动；计算「有关入息」（含基本工资 / 津贴 / 佣金，不含房补等）</td>
+                                </tr>
+                                <tr>
+                                    <td>2. 计算供款</td>
+                                    <td>每月 1-30 日</td>
+                                    <td>按 5% 的比例算雇主 / 雇员供款额（收入少于 HK$7,100 时雇员不供款）</td>
+                                </tr>
+                                <tr>
+                                    <td>3. 提交供款</td>
+                                    <td>每月 10 日前</td>
+                                    <td>登陆受托人系统（如汇丰 MPF），上传员工数据及转账授权，完成汇款并保留凭证</td>
+                                </tr>
+                                <tr>
+                                    <td>4. 通知存档</td>
+                                    <td>每月 16-20 日</td>
+                                    <td>向员工发送供款记录，内部存档至少 7 年（符合《雇佣条约例》）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>4. 风险和合规</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>违规后果</th>
+                                    <th>典型案例</th>
+                                    <th>合规建议</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>罚款（最高 HK$35 万）+ 监禁</td>
+                                    <td>漏缴销售团队 3 个月→补缴 HK4.5 万 + 罚款 HK2,250</td>
+                                    <td>1. 财务 + HR 双重复核；2. 系统自动提醒截止日</td>
+                                </tr>
+                                <tr>
+                                    <td>未保存记录→仲裁赔 HK$8,600</td>
+                                    <td>未保存供款记录引发仲裁</td>
+                                    <td>3 季度法规培训（关注 2024 年入息调整）</td>
+                                </tr>
+                                <tr>
+                                    <td>行政成本增加</td>
+                                    <td>临时工漏缴→补供 HK1,420 + 滞纳金 HK71</td>
+                                    <td>建立临时工供款跟踪机制</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="guide-subsection">
+                        <h2>香港雇主未依法购买劳工保险的风险与合规指南</h2>
+                        <h3>1. 法律严惩：刑事与民事双重追责</h3>
+                        <ul>
+                            <li><strong>刑事处罚：</strong>根据《雇员补偿条例》第 282 章，未投保雇主最高面临 HK$10万罚款 + 监禁2年；持续违规者追加每日HK$1,000 罚款，直至合规</li>
+                            <li><strong>民事诉讼：</strong>员工因工受伤 / 患职业病可直接起诉，索赔范围包括医疗费、伤残赔偿、护理费；故意违法可能触发惩罚性赔偿（如赔偿金额翻倍）</li>
+                        </ul>
+                        <h3>2. 财务重负：高额赔偿与破产风险</h3>
+                        <ul>
+                            <li><strong>巨额赔偿无上限：</strong>死亡赔偿（员工年收入 36-84 倍，法定最低约 HK$50万起，如2022年某建筑工人坠亡案，雇主被判赔HK$420 万）；永久伤残赔偿（按伤残等级支付，最高可达数百万元）</li>
+                            <li><strong>现金流断裂风险：</strong>重大工伤可能导致企业因一次性巨额支出破产</li>
+                        </ul>
+                        <h3>3. 运营与声誉危机</h3>
+                        <ul>
+                            <li><strong>业务资格受限：</strong>政府投标、银行贷款需提供保险证明，未投保者直接丧失资格</li>
+                            <li><strong>人才与口碑崩塌：</strong>员工安全感下降→离职率上升 + 招聘困难；劳工处公开点名→品牌形象严重受损</li>
+                        </ul>
+                        <h3>4. 连带风险：外籍员工与合规稽查</h3>
+                        <ul>
+                            <li><strong>外籍员工签证受阻：</strong>入境处强制要求为外籍员工投保，否则拒发 / 撤销工作签证</li>
+                            <li><strong>触发强积金（MPF）连带稽查：</strong>劳工处可能因未投保追溯核查强积金缴纳情况</li>
+                        </ul>
+                        <h3>5. 例外与建议</h3>
+                        <ul>
+                            <li><strong>极少豁免：</strong>仅 “雇主为唯一员工且持股 100%”（需申请），仍建议投保</li>
+                            <li><strong>合规行动：</strong>速购保险（持牌公司，保费 0.5%-3% 年薪）；覆盖全体员工（全 / 兼 / 临时工）；定期更新保单（随人员薪资调整）</li>
+                            <li><strong>法律依据速览：</strong>《雇员补偿条例》第 40 条（强制投保义务）；《职业安全及健康条例》第 6A 条（安全保障关联要求）</li>
+                            <li><strong>核心提示：</strong>未投保成本远高于保费（如 HK$420万赔偿vs.年均保费HK$2 万），合规是唯一选择</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-subsection">
+                        <h2>香港员工离职流程与合规要点</h2>
+                        <h3>1. 离职类型与合法性确认</h3>
+                        <ul>
+                            <li><strong>自愿离职：</strong>需书面辞职信，确认通知期（通常 1 个月，按合约）</li>
+                            <li><strong>解雇 / 裁员：</strong>严格遵守《雇佣条例》，避免非法解雇（如怀孕、工伤歧视）</li>
+                            <li><strong>即时解雇：</strong>限严重违纪（如盗窃），需备齐证据</li>
+                        </ul>
+                        <h3>2. 通知期与代通知金</h3>
+                        <p>未履约需支付代通知金（等同通知期工资），确定最后工作日及交接安排</p>
+                        <h3>3. 薪资与福利结算</h3>
+                        <ul>
+                            <li><strong>最后工资：</strong>含薪金、未用年假折算、法定假日补偿（7 天内支付）</li>
+                            <li><strong>奖金 / 花红：</strong>按合约条款执行</li>
+                            <li><strong>强积金（MPF）：</strong>办理停供，提供供款记录，协助账户转移</li>
+                        </ul>
+                        <h3>4. 离职文件签署</h3>
+                        <ul>
+                            <li><strong>离职确认信：</strong>列明日期、薪资、假期结余</li>
+                            <li><strong>服务证明书：</strong>员工有权要求（内容中立）</li>
+                            <li><strong>保密 / 敬业协议：</strong>重申合约义务</li>
+                        </ul>
+                        <h3>5. 资产与权限回收</h3>
+                        <p>收回门卡、设备、文件，关闭系统权限（邮件、门禁等）</p>
+                        <h3>6. 税务与强基金申报</h3>
+                        <ul>
+                            <li><strong>税务：</strong>提交 IR56F 表格（通知税务局）</li>
+                            <li><strong>MPF：</strong>离职后 10 天内向受托人提交终止通知</li>
+                        </ul>
+                        <h3>7. 合规风险控制</h3>
+                        <ul>
+                            <li><strong>禁止行为：</strong>离职证明含歧视性用语；忽视强积金申报时限（10 天内必办）；拖延支付最后工资（超 7 天违法）</li>
+                            <li><strong>特殊情况：</strong>外籍员工（通知入境处终止工作签证）；裁员（需符合法定程序）；文件保存（离职文件存档至少 7 年）</li>
+                        </ul>
+                        <h3>8. 离职面谈与记录更新</h3>
+                        <ul>
+                            <li><strong>面谈：</strong>自愿进行，收集管理反馈（保持专业）</li>
+                            <li><strong>内部通知：</strong>更新财务、IT、组织架构等记录</li>
+                        </ul>
+                        <h3>9. 常见错误避坑</h3>
+                        <p>忽视强积金申报时限</p>
+                        <p>拖延支付最后工资</p>
+                        <p>离职证明包含歧视性内容</p>
+                    </div>
+
+                    <div class="guide-subsection">
+                        <h2>香港招聘全流程合规指南</h2>
+                        <h3>1. 招聘前筹备（01）</h3>
+                        <ul>
+                            <li><strong>需求确认：</strong>与部门共创职位描述（JD），明确职责、任职要求及薪资范围；制定预算（猎头费、广告投放等）</li>
+                            <li><strong>渠道规划：</strong>普通岗位（JobsDB、CTgoodjobs、LinkedIn）；高端岗位（猎头公司）；应届生（校园招聘会）</li>
+                            <li><strong>JD 合规要点：</strong>禁用年龄 / 性别 / 种族歧视表述（符合《反歧视条例》）</li>
+                        </ul>
+                        <h3>2. 招聘执行（02）</h3>
+                        <ul>
+                            <li><strong>广告发布：</strong>线上（公司官网、社交媒体，薪酬透明化趋势）；线下（行业展会、招聘会）</li>
+                            <li><strong>简历筛选：</strong>HR 初筛基本条件（学历 / 经验）→部门复核短名单</li>
+                            <li><strong>面试管理：</strong>流程（HR 初面（电话）→部门技术面→高管终面（管理层））；禁忌（避免询问婚姻 / 生育计划等敏感问题）</li>
+                            <li><strong>背景核查：</strong>必查（学历验证、工作履历）；特殊岗位（金融行业需查 SFC 牌照、无犯罪记录）</li>
+                        </ul>
+                        <h3>3. 录用与入职（03）</h3>
+                        <ul>
+                            <li><strong>Offer 发放：</strong>内容（薪资、试用期、竞业协议等）；谈判（灵活调整薪酬方案，需与部门协商）</li>
+                            <li><strong>入职准备：</strong>签证（为非本地员工申请 IANG / 工作签证）；文件（劳动合同、MPF 登记表、IR56E 税务表）</li>
+                            <li><strong>入职当天（Day 1）：</strong>团队介绍、设备发放、政策文件签署；设定试用期目标（30/60/90 天节点反馈）</li>
+                        </ul>
+                        <h3>4. 后续优化（04）</h3>
+                        <ul>
+                            <li><strong>数据驱动改进：</strong>监控指标（招聘周期、人均成本、Offer 接受率）；优化渠道组合与面试流程</li>
+                            <li><strong>人才库建设：</strong>归档未录用优秀候选人（ATS 系统管理）；定期触达更新求职意向（每半年一次）</li>
+                        </ul>
+                        <h3>5. 香港特殊合规项（05）</h3>
+                        <ul>
+                            <li><strong>法律底线：</strong>严守《雇佣条例》《个人资料隐私条例》；薪酬广告避免歧视性表述</li>
+                            <li><strong>语言要求：</strong>JD 需中英文双语，多数岗位要求双语沟通</li>
+                            <li><strong>薪酬策略：</strong>参考 JobsDB 报告、Mercer 调研数据保持竞争力</li>
+                        </ul>
+                    </div>
+
+                    <div class="guide-subsection">
+                        <h2>香港员工保险（劳工保险）购买指南与合规要点</h2>
+                        <h3>1. 法定强制保险：劳工保险</h3>
+                        <ul>
+                            <li><strong>保障范围：</strong>医疗费、伤残赔偿、死亡抚恤金（死亡赔偿为年收入 36-84 倍，最低约 HK$50 万起）</li>
+                            <li><strong>购买渠道：</strong>通过持牌保险公司（如 Zurich、Chubb）或经纪公司，提供员工职位、薪资等信息核保</li>
+                            <li><strong>法律依据：</strong>《雇员补偿条例》规定，雇主必须为全体员工（含全职 / 兼职 / 外籍）投保，覆盖工作意外及职业病</li>
+                        </ul>
+                        <h3>2. 购买全流程</h3>
+                        <ul>
+                            <li><strong>01 需求评估：</strong>统计员工规模、岗位风险（如建筑业需更高保额）；结合预算确定是否叠加补充保险（如团体医疗、人寿险）</li>
+                            <li><strong>02 供应商比价：</strong>对比主流保险公司条款（如 AIG 劳工险、Bupa 医疗险），重点关注保费、免赔额、海外治疗覆盖等；索取多份报价单，横向对比性价比</li>
+                            <li><strong>03 方案定制与审批：</strong>协商定制条款（如按职级分层保障），确保劳工险符合法定最低标准；制作方案对比表，提交管理层审批（需突出合规性与成本优化点）</li>
+                            <li><strong>04 签约与员工沟通：</strong>签署保单并提交员工名单，同步办理强积金登记；组织福利说明会，发放中英双语保险手册，明确理赔流程</li>
+                        </ul>
+                        <h3>3. 关键注意事项</h3>
+                        <ul>
+                            <li><strong>合规底线：</strong>劳工险保单需明确标注法定赔偿金额，避免因保额不足被罚</li>
+                            <li><strong>成本控制技巧：</strong>设置合理免赔额（如 HK$1,000 / 次）降低保费；合并购买劳工险与团体医疗险，争取供应商打包折扣</li>
+                            <li><strong>动态管理：</strong>员工变动（离职员工及时终止保险，新员工入职后 7 天内完成参保）；年度复核（分析理赔数据（如工伤频率），调整保障范围）；外籍员工需同步确认保险覆盖其原籍国医疗需求（如有）</li>
+                        </ul>
+                        <h3>4. 风险提示</h3>
+                        <ul>
+                            <li><strong>未投保后果：</strong>最高面临 HK$10万罚款+监禁2年，且需自担全额工伤赔偿（案例：未投保雇主被判赔HK$420 万）</li>
+                            <li><strong>文件保存：：</strong>保单、员工参保记录需存档至少 7 年，以备劳工处稽查</li>
+                        </ul>
+                        <h3>5. 补充保险建议</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>类型</th>
+                                    <th>适用场景</th>
+                                    <th>主流供应商</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>团体医疗保险</td>
+                                    <td>提升员工福利，覆盖门诊 / 住院费用</td>
+                                    <td>AIA、AXA</td>
+                                </tr>
+                                <tr>
+                                    <td>人寿及伤残保险</td>
+                                    <td>高管或核心岗位额外保障</td>
+                                    <td>MetLife、Prudential</td>
+                                </tr>
+                                <tr>
+                                    <td>海外差旅保险</td>
+                                    <td>频繁外派员工，覆盖紧急医疗转运</td>
+                                    <td>Chubb、Allianz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>SuperLink</h3>
+            <p>极致链接，专注助力内地科创企业高效拓展香港市场</p>
+            <div class="social-links">
+              <a href="#" class="social-link">微信</a>
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">微博</a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="link-group">
+              <h4>核心服务</h4>
+              <a href="index.html#services">人才招聘</a>
+              <a href="index.html#services">薪酬合规</a>
+              <a href="index.html#services">团队管理</a>
+              <a href="index.html#services">远程雇佣</a>
+            </div>
+            <div class="link-group">
+              <h4>关于我们</h4>
+              <a href="index.html#about">公司介绍</a>
+              <a href="index.html#team">专家团队</a>
+              <a href="index.html#contact">联系我们</a>
+            </div>
+            <div class="link-group">
+              <h4>实用资源</h4>
+              <a href="index.html#guide">香港落地指南</a>
+              <a href="#">合规手册下载</a>
+              <a href="index.html#advantages">服务优势</a>
+              <a href="index.html#target-clients">适用企业</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 SuperLink Consulting. 版权所有</p>
+          <div class="footer-legal">
+            <a href="#">隐私政策</a>
+            <a href="#">服务条款</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 初始化 Lucide 图标
+        lucide.createIcons();
+        
+        // 目录导航功能
+        class TableOfContents {
+            constructor() {
+                this.tocContainer = document.getElementById('toc-content');
+                this.mobileToggle = document.getElementById('mobile-toc-toggle');
+                this.tocClose = document.getElementById('toc-close');
+                this.tocNav = document.getElementById('table-of-contents');
+                this.tocOverlay = document.getElementById('toc-overlay');
+                this.headings = [];
+                this.activeLink = null;
+                
+                this.init();
+            }
+            
+            init() {
+                this.generateTOC();
+                this.bindEvents();
+                this.observeHeadings();
+            }
+            
+            // 生成目录
+            generateTOC() {
+                const headings = document.querySelectorAll('.guide-content h2, .guide-content h3');
+                let tocHTML = '<ul class="toc-list">';
+                let currentH2 = null;
+                
+                headings.forEach((heading, index) => {
+                    const id = this.generateId(heading.textContent, index);
+                    heading.id = id;
+                    this.headings.push(heading);
+                    
+                    if (heading.tagName === 'H2') {
+                        if (currentH2) {
+                            tocHTML += '</ul></li>';
+                        }
+                        tocHTML += `<li><a href="#${id}" class="toc-link toc-h2">${heading.textContent}</a><ul class="toc-sub-list">`;
+                        currentH2 = heading;
+                    } else if (heading.tagName === 'H3' && currentH2) {
+                        tocHTML += `<li><a href="#${id}" class="toc-link toc-h3">${heading.textContent}</a></li>`;
+                    }
+                });
+                
+                if (currentH2) {
+                    tocHTML += '</ul></li>';
+                }
+                tocHTML += '</ul>';
+                
+                this.tocContainer.innerHTML = tocHTML;
+            }
+            
+            // 生成ID
+            generateId(text, index) {
+                return text.toLowerCase()
+                    .replace(/[^\w\u4e00-\u9fa5\s-]/g, '')
+                    .replace(/\s+/g, '-')
+                    .replace(/^-+|-+$/g, '') + '-' + index;
+            }
+            
+            // 绑定事件
+            bindEvents() {
+                // 移动端切换按钮
+                this.mobileToggle.addEventListener('click', () => {
+                    this.toggleMobileTOC(true);
+                });
+                
+                // 关闭按钮
+                this.tocClose.addEventListener('click', () => {
+                    this.toggleMobileTOC(false);
+                });
+                
+                // 遮罩层点击
+                this.tocOverlay.addEventListener('click', () => {
+                    this.toggleMobileTOC(false);
+                });
+                
+                // 目录链接点击
+                this.tocContainer.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('toc-link')) {
+                        e.preventDefault();
+                        const targetId = e.target.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            this.smoothScrollTo(targetElement);
+                            this.setActiveLink(e.target);
+                            
+                            // 移动端自动关闭目录
+                            if (window.innerWidth <= 768) {
+                                this.toggleMobileTOC(false);
+                            }
+                        }
+                    }
+                });
+                
+                // 窗口尺寸改变
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 768) {
+                        this.toggleMobileTOC(false);
+                    }
+                });
+            }
+            
+            // 切换移动端目录
+            toggleMobileTOC(show) {
+                if (show) {
+                    this.tocNav.classList.add('active');
+                    this.tocOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    this.tocNav.classList.remove('active');
+                    this.tocOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // 平滑滚动
+            smoothScrollTo(element) {
+                const offsetTop = element.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // 设置活跃链接
+            setActiveLink(link) {
+                if (this.activeLink) {
+                    this.activeLink.classList.remove('active');
+                }
+                link.classList.add('active');
+                this.activeLink = link;
+            }
+            
+            // 观察标题元素
+            observeHeadings() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            const link = this.tocContainer.querySelector(`a[href="#${id}"]`);
+                            if (link) {
+                                this.setActiveLink(link);
+                            }
+                        }
+                    });
+                }, {
+                    rootMargin: '-20% 0px -70% 0px'
+                });
+                
+                this.headings.forEach(heading => {
+                    observer.observe(heading);
+                });
+            }
+        }
+        
+        // 初始化目录导航
+        document.addEventListener('DOMContentLoaded', () => {
+            new TableOfContents();
+        });
+    </script>
+</body>
+</html>
