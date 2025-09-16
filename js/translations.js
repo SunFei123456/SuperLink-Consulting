@@ -293,6 +293,7 @@ const translations = {
             priceComparisonTitle: "服务价格对比",
             priceTable: {
                 headers: ["项目", "最低配置成本", "我们的建议服务价格 (港币)", "市场常见服务价格 (港币)"],
+                otherFees: "其他费用",
                 rows: {
                     registration: {
                         item: "注册费用",
@@ -347,6 +348,8 @@ const translations = {
             housekeeperTitle: "管家服务价格说明",
             housekeeperTable: {
                 headers: ["服务类型", "定价", "服务模式", "具体说明"],
+                semiManagedTitle: "HR管家服务 - 半托管",
+                fullyManagedTitle: "HR管家服务 - 全托管",
                 rows: {
                     semiManaged: {
                         service: "HR管家服务",
@@ -683,6 +686,7 @@ const translations = {
             priceComparisonTitle: "Service Price Comparison",
             priceTable: {
                 headers: ["Item", "Minimum Configuration Cost", "Our Recommended Service Price (HKD)", "Market Common Service Price (HKD)"],
+                otherFees: "Other Fees",
                 rows: {
                     registration: {
                         item: "Registration Fee",
@@ -737,6 +741,8 @@ const translations = {
             housekeeperTitle: "Butler Service Pricing",
             housekeeperTable: {
                 headers: ["Service Type", "Pricing", "Service Model", "Description"],
+                semiManagedTitle: "HR Butler Service - Semi-managed",
+                fullyManagedTitle: "HR Butler Service - Fully-managed",
                 rows: {
                     semiManaged: {
                         service: "HR Butler Service",
