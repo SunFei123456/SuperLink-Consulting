@@ -1,1197 +1,1254 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SuperLink Consulting - 内地企业落地香港一站式HR服务</title>
-    <meta
-      name="description"
-      content="专注助力内地科创企业高效拓展香港市场，提供一站式HR解决方案，包括人才招聘、薪酬合规、团队管理等专业服务"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/target-clients.css" />
-    <style>
-      /* 工具提示样式 */
-      .tooltip-container {
-        position: relative;
-        display: inline-block;
-      }
-      .tooltip-trigger {
-        position: relative;
-        color: #ff6b35;
-        font-weight: 600;
-        cursor: pointer;
-        border-bottom: 2px dotted #ff6b35;
-        transition: all 0.3s ease;
-      }
-      .tooltip-trigger:hover {
-        color: #ff4500;
-        border-bottom-color: #ff4500;
-      }
-      .tooltip-card {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        padding: 0;
-        min-width: 400px;
-        max-width: 500px;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        margin-top: 10px;
-      }
-      .tooltip-trigger:hover + .tooltip-card,
-      .tooltip-card:hover {
-        opacity: 1;
-        visibility: visible;
-      }
-      .tooltip-header {
-        background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
 
-        padding: 16px 20px;
-        border-radius: 12px 12px 0 0;
-        margin: 0;
-      }
-      .tooltip-header h4 {
-        margin: 0;
-        font-size: 16px;
-        font-weight: 600;
-        color: white;
-      }
-      .tooltip-content {
-        padding: 20px;
-      }
-      .license-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .license-list li {
-        padding: 8px 0;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-      .license-list li:last-child {
-        border-bottom: none;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperLink Consulting - 内地企业落地香港一站式HR服务</title>
+  <meta name="description" content="专注助力内地科创企业高效拓展香港市场，提供一站式HR解决方案，包括人才招聘、薪酬合规、团队管理等专业服务" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/target-clients.css" />
+  <style>
+    /* 工具提示样式 */
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
 
-  <body>
-    <!-- Streaming Background -->
-    <div class="streaming-bg">
-      <div class="light-beam beam-1"></div>
-      <div class="light-beam beam-2"></div>
-      <div class="light-beam beam-3"></div>
+    .tooltip-trigger {
+      position: relative;
+      color: #ff6b35;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px dotted #ff6b35;
+      transition: all 0.3s ease;
+    }
+
+    .tooltip-trigger:hover {
+      color: #ff4500;
+      border-bottom-color: #ff4500;
+    }
+
+    .tooltip-card {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      padding: 0;
+      min-width: 400px;
+      max-width: 500px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .tooltip-trigger:hover+.tooltip-card,
+    .tooltip-card:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .tooltip-header {
+      background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+
+      padding: 16px 20px;
+      border-radius: 12px 12px 0 0;
+      margin: 0;
+    }
+
+    .tooltip-header h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+    }
+
+    .tooltip-content {
+      padding: 20px;
+    }
+
+    .license-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .license-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .license-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Streaming Background -->
+  <div class="streaming-bg">
+    <div class="light-beam beam-1"></div>
+    <div class="light-beam beam-2"></div>
+    <div class="light-beam beam-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-box">
+      <div class="nav-brand">
+        <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
+      </div>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link" data-i18n="nav.home">首页</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">关于我们</a>
+        <a href="#target-clients" class="nav-link" data-i18n="nav.target-clients">服务对象</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">核心服务</a>
+        <a href="#guide" class="nav-link" data-i18n="nav.guide">香港落地指南</a>
+        <a href="practical-guide.html" class="nav-link" data-i18n="nav.practicalGuide">实战指南</a>
+        <a href="#team" class="nav-link" data-i18n="nav.team">专家团队</a>
+        <a href="#advantages" class="nav-link" data-i18n="nav.advantages">竞争优势</a>
+        <a href="#contact" class="nav-link cta-button" data-i18n="nav.contact">立即咨询</a>
+      </div>
+
+
+
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="navbar-box">
-        <div class="nav-brand">
-          <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span data-i18n="hero.badge">极致链接 SuperLink Consulting</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero.title">内地企业落地香港<br />一站式HR服务专家</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式HR解决方案
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary"
+              onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+              data-i18n="hero.btnPrimary">
+              <span>立即咨询</span>
+              <div class="btn-glow"></div>
+            </button>
+            <button class="btn btn-outline" onclick="window.location.href='practical-guide.html';"
+              data-i18n="hero.btnSecondary">
+              <span>查看合规手册</span>
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.experience">10年</span>
+              <span class="stat-label" data-i18n="hero.stats.experienceLabel">人力资源管理经验</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.service">7×24h</span>
+              <span class="stat-label" data-i18n="hero.stats.serviceLabel">快速响应服务</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="hero.stats.concept">省心 | 省事 | 省钱</span>
+              <span class="stat-label" data-i18n="hero.stats.conceptLabel">三省服务理念</span>
+            </div>
+          </div>
         </div>
-        <div class="nav-menu">
-          <a href="#home" class="nav-link">首页</a>
-          <a href="#about" class="nav-link">关于我们</a>
-          <a href="#target-clients" class="nav-link">服务对象</a>
-          <a href="#services" class="nav-link">核心服务</a>
-          <a href="#guide" class="nav-link">香港落地指南</a>
-          <a href="practical-guide.html" class="nav-link">实战指南</a>
-          <a href="#team" class="nav-link">专家团队</a>
-          <a href="#advantages" class="nav-link">竞争优势</a>
-          <a href="#contact" class="nav-link cta-button">立即咨询</a>
-        </div>
-
-        <div class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="hero-visual">
+          <div class="visual-sphere">
+            <div class="sphere-ring ring-1"></div>
+            <div class="sphere-ring ring-2"></div>
+            <div class="sphere-ring ring-3"></div>
+            <div class="sphere-core"></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="hero">
-        <div class="hero-particles">
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="about.badge">关于我们</div>
+          <h2 class="section-title" data-i18n="about.title">极致链接 SuperLink Consulting</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">
+            专注助力内地科创企业高效拓展香港市场，团队成员横跨深港，具有20年内地科技企业人力资源管理经验
+          </p>
         </div>
-        <div class="container">
-          <div class="hero-content">
-            <div class="hero-badge">
-              <span>极致链接 SuperLink Consulting</span>
-            </div>
-            <h1 class="hero-title">内地企业落地香港<br />一站式HR服务专家</h1>
-            <p class="hero-subtitle">
-              专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式HR解决方案
-            </p>
-            <div class="hero-actions">
-              <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                <span>立即咨询</span>
-                <div class="btn-glow"></div>
-              </button>
-              <button class="btn btn-outline" onclick="window.location.href='practical-guide.html';">
-                <span>查看合规手册</span>
-              </button>
-            </div>
-            <div class="hero-stats">
-              <div class="stat-item">
-                <span class="stat-number">10年</span>
-                <span class="stat-label">人力资源管理经验</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">7×24h</span>
-                <span class="stat-label">快速响应服务</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">省心 | 省事 | 省钱</span>
-                <span class="stat-label">三省服务理念</span>
-              </div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="visual-sphere">
-              <div class="sphere-ring ring-1"></div>
-              <div class="sphere-ring ring-2"></div>
-              <div class="sphere-ring ring-3"></div>
-              <div class="sphere-core"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- About Section -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">关于我们</div>
-            <h2 class="section-title">极致链接 SuperLink Consulting</h2>
-            <p class="section-subtitle">
-              专注助力内地科创企业高效拓展香港市场，团队成员横跨深港，具有20年内地科技企业人力资源管理经验
-            </p>
-          </div>
+        <div class="about-grid">
+          <img src="./images/zhengnan.png" alt="" class="zhengnan" />
+          <!-- 创始人详细介绍 -->
+          <div class="about-visual">
+            <div class="founder-profile">
+              <div class="founder-info">
+                <h3 data-i18n="founder.name">郑楠</h3>
+                <p class="founder-title" data-i18n="founder.title">创始人 & CEO</p>
 
-          <div class="about-grid">
-            <img src="./images/zhengnan.png" alt="" class="zhengnan" />
-            <!-- 创始人详细介绍 -->
-            <div class="about-visual">
-              <div class="founder-profile">
-                <div class="founder-info">
-                  <h3>郑楠</h3>
-                  <p class="founder-title">创始人 & CEO</p>
-
-                  <!-- 职业身份与经历 -->
-                  <div class="founder-section">
-                    <h4>职业身份与经历</h4>
-                    <div class="founder-highlights">
-                      <div class="highlight-item">
-                        <span class="highlight-icon">🏢</span>
-                        <div class="highlight-content">
-                          <strong>执一管理咨询创始人</strong>
-                          <span
-                            >2023年创立执一咨询，专注为科技创业者提供人力资源服务</span
-                          >
-                        </div>
+                <!-- 职业身份与经历 -->
+                <div class="founder-section">
+                  <h4 data-i18n="founder.sectionTitle">职业身份与经历</h4>
+                  <div class="founder-highlights">
+                    <div class="highlight-item">
+                      <span class="highlight-icon">🏢</span>
+                      <div class="highlight-content">
+                        <strong data-i18n="founder.item1.title">执一管理咨询创始人</strong>
+                        <span data-i18n="founder.item1.desc">2023年创立执一咨询，专注为科技创业者提供人力资源服务</span>
                       </div>
-                      <div class="highlight-item">
-                        <span class="highlight-icon">💼</span>
-                        <div class="highlight-content">
-                          <strong>人力资源资深专家</strong>
-                          <span
-                            >深耕行业近20年，曾效力于IBM、百度、腾讯等企业，参与和见证两家创业公司成功上市</span
-                          >
-                        </div>
+                    </div>
+                    <div class="highlight-item">
+                      <span class="highlight-icon">💼</span>
+                      <div class="highlight-content">
+                        <strong data-i18n="founder.item2.title">人力资源资深专家</strong>
+                        <span data-i18n="founder.item2.desc">深耕行业近20年，曾效力于IBM、百度、腾讯等企业，参与和见证两家创业公司成功上市</span>
                       </div>
-                      <div class="highlight-item">
-                        <span class="highlight-icon">🎯</span>
-                        <div class="highlight-content">
-                          <strong>科创企业人力资源陪跑导师</strong>
-                          <span
-                            >曾深度参与普渡科技、云鲸智能等科技公司初创期人才搭建，陪伴公司从初创到千人规模</span
-                          >
-                        </div>
+                    </div>
+                    <div class="highlight-item">
+                      <span class="highlight-icon">🎯</span>
+                      <div class="highlight-content">
+                        <strong data-i18n="founder.item3.title">科创企业人力资源陪跑导师</strong>
+                        <span data-i18n="founder.item3.desc">曾深度参与普渡科技、云鲸智能等科技公司初创期人才搭建，陪伴公司从初创到千人规模</span>
                       </div>
-                      <div class="highlight-item">
-                        <span class="highlight-icon">🏆</span>
-                        <div class="highlight-content">
-                          <strong>人力资源领域KOL</strong>
-                          <span
-                            >"大湾区猎头一姐"账号主理人，全网10万+高质量高购买力粉丝，香港人才办公室特邀嘉宾</span
-                          >
-                        </div>
+                    </div>
+                    <div class="highlight-item">
+                      <span class="highlight-icon">🏆</span>
+                      <div class="highlight-content">
+                        <strong data-i18n="founder.item4.title">人力资源领域KOL</strong>
+                        <span data-i18n="founder.item4.desc">"大湾区猎头一姐"账号主理人，全网10万+高质量高购买力粉丝，香港人才办公室特邀嘉宾</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="about-content">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <div class="icon-glow"></div>
-                  <span>💼</span>
-                </div>
-                <h4>专注服务科创企业</h4>
-                <p>
-                  深刻理解科创企业的业务和人才需求，快速匹配香港人才市场，精准对接人才和商机
-                </p>
-                <div class="feature-tag">省心</div>
+          </div>
+          <div class="about-content">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <div class="icon-glow"></div>
+                <span>💼</span>
               </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <div class="icon-glow"></div>
-                  <span>🚀</span>
-                </div>
-                <h4>高效的香港本地人力资源支持团队</h4>
-                <p>
-                  7×24小时快速响应科创企业的人才招聘，合规雇佣和劳动关系管理等事宜；在多家知名港资企业、中资企业任职10年以上的专业人力资源顾问团队
-                </p>
-                <div class="feature-tag">省事</div>
+              <h4 data-i18n="founder.feature1.title">专注服务科创企业</h4>
+              <p data-i18n="founder.feature1.desc">
+                深刻理解科创企业的业务和人才需求，快速匹配香港人才市场，精准对接人才和商机
+              </p>
+              <div class="feature-tag">省心</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <div class="icon-glow"></div>
+                <span>🚀</span>
               </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <div class="icon-glow"></div>
-                  <span>💰</span>
-                </div>
-                <h4>极致性价比的收费</h4>
-                <p>
-                  科创企业在人才服务上更加需要关注效能，我们承诺提供极致性价比的收费，帮助企业降低成本
-                </p>
-                <div class="feature-tag">省钱</div>
+              <h4 data-i18n="founder.feature2.title">高效的香港本地人力资源支持团队</h4>
+              <p data-i18n="founder.feature2.desc">
+                7×24小时快速响应科创企业的人才招聘，合规雇佣和劳动关系管理等事宜；在多家知名港资企业、中资企业任职10年以上的专业人力资源顾问团队
+              </p>
+              <div class="feature-tag">省事</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <div class="icon-glow"></div>
+                <span>💰</span>
               </div>
+              <h4 data-i18n="founder.feature3.title">极致性价比的收费</h4>
+              <p data-i18n="founder.feature3.desc">
+                科创企业在人才服务上更加需要关注效能，我们承诺提供极致性价比的收费，帮助企业降低成本
+              </p>
+              <div class="feature-tag">省钱</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Target Clients Section -->
-      <section id="target-clients" class="target-clients">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">目标服务客户</div>
-            <h2 class="section-title">专注服务科创企业</h2>
-            <p class="section-subtitle">
-              深度理解科创企业的业务特点和人才需求，提供精准匹配的HR服务
+    <!-- Target Clients Section -->
+    <section id="target-clients" class="target-clients">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="targetClients.badge">目标服务客户</div>
+          <h2 class="section-title" data-i18n="targetClients.title">专注服务科创企业</h2>
+          <p class="section-subtitle" data-i18n="targetClients.subtitle">
+            深度理解科创企业的业务特点和人才需求，提供精准匹配的HR服务
+          </p>
+        </div>
+        <div class="target-clients-grid">
+          <div class="client-card">
+            <div class="card-header">
+              <h3 data-i18n="targetClients.scaleTitle">规模</h3>
+            </div>
+            <div class="card-content">
+              <p data-i18n="targetClients.scaleDesc">员工 0-200人的企业</p>
+            </div>
+          </div>
+          <div class="client-card featured">
+            <div class="card-header">
+              <h3 data-i18n="targetClients.needsTitle">需求痛点</h3>
+            </div>
+            <div class="card-content">
+              <p data-i18n="targetClients.needsDesc">
+                香港本地没有HR,但需要开展业务,需要高性价比的做好人才招募,公司管理体系的搭建。
+              </p>
+            </div>
+          </div>
+          <div class="client-card">
+            <div class="card-header">
+              <h3 data-i18n="targetClients.industryTitle">行业</h3>
+            </div>
+            <div class="card-content">
+              <p data-i18n="targetClients.industryDesc">
+                科技企业:机器人,AI,消费电子,新材料,生物医药各类专业服务公司
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="services.badge">核心服务</div>
+          <h2 class="section-title" data-i18n="services.title">一站式HR管家服务</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">
+            从人才诊断到团队优化的全周期HR解决方案
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card featured">
+            <div class="service-number">01</div>
+            <div class="service-icon">
+              <div class="icon-wrapper">
+                <span>🎯</span>
+              </div>
+            </div>
+            <h3 data-i18n="services.service1.title">精准诊断</h3>
+            <div class="sub" data-i18n="services.service1.subtitle">锚定团队缺口与战略目标</div>
+            <p data-i18n="services.service1.desc1">
+              深度调研企业的业务模式、技术路线及文化基因，识别核心岗位能力画像。
+            </p>
+
+            <p data-i18n="services.service1.desc2">
+              建立对标香港市场的人才画像，帮助客户撰写招聘说明书，助力高效的打通人才招聘渠道
             </p>
           </div>
-          <div class="target-clients-grid">
-            <div class="client-card">
-              <div class="card-header">
-                <h3>规模</h3>
-              </div>
-              <div class="card-content">
-                <p>员工 0-200人的企业</p>
-              </div>
-            </div>
-            <div class="client-card featured">
-              <div class="card-header">
-                <h3>需求痛点</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  香港本地没有HR,但需要开展业务,需要高性价比的做好人才招募,公司管理体系的搭建。
-                </p>
-              </div>
-            </div>
-            <div class="client-card">
-              <div class="card-header">
-                <h3>行业</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  科技企业:机器人,AI,消费电子,新材料,生物医药各类专业服务公司
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section id="services" class="services">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">核心服务</div>
-            <h2 class="section-title">一站式HR管家服务</h2>
-            <p class="section-subtitle">
-              从人才诊断到团队优化的全周期HR解决方案
-            </p>
-          </div>
-          <div class="services-grid">
-            <div class="service-card featured">
-              <div class="service-number">01</div>
-              <div class="service-icon">
-                <div class="icon-wrapper">
-                  <span>🎯</span>
-                </div>
-              </div>
-              <h3>精准诊断</h3>
-              <div class="sub">锚定团队缺口与战略目标</div>
-              <p>
-                深度调研企业的业务模式、技术路线及文化基因，识别核心岗位能力画像。
-              </p>
-
-              <p>
-                建立对标香港市场的人才画像，帮助客户撰写招聘说明书，助力高效的打通人才招聘渠道
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-number">02</div>
-              <div class="service-icon">
-                <div class="icon-wrapper">
-                  <span>⚡</span>
-                </div>
-              </div>
-              <h3>敏捷执行</h3>
-              <div class="sub">全周期人才管理闭环</div>
-              <p>招聘：通过行业人脉网络与数字化渠道，精准触达人才</p>
-              <p>培养：设计定制化能力提升方案，结合实战项目加速人才融入。</p>
-              <p>
-                留存：构建激励体系（长短期目标达成与薪酬/股份的挂钩机制，识别核心员工，重点培养，降低关键岗位流失风险。
-              </p>
-            </div>
-            <div class="service-card">
-              <div class="service-number">03</div>
-              <div class="service-icon">
-                <div class="icon-wrapper">
-                  <span>🌐</span>
-                </div>
-              </div>
-              <h3>专业支持</h3>
-              <div class="sub">建立远程雇佣体系</div>
-              <p>支持跨境员工招聘、远程办公政策设计与合规支持。</p>
-              <p>
-                具备跨境服务能力（如外籍员工签证支持）助力企业布局亚洲市场。
-              </p>
-            </div>
-          </div>
-          <div class="service-pricing">
-            <h3>服务价格</h3>
-            <div class="pricing-grid">
-              <div class="pricing-card">
-                <h4>半托管服务</h4>
-                <div class="price">10万港币/年</div>
-                <p>不包含人才招募服务</p>
-              </div>
-              <div class="pricing-card featured">
-                <h4>全托管服务</h4>
-                <div class="price">20万港币/年</div>
-                <p>包含人才招募服务</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Hong Kong Guide Section -->
-      <section id="guide" class="guide">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">香港落地指南</div>
-            <h2 class="section-title">解决落地困难，降低合规风险</h2>
-            <p class="section-subtitle">
-              全面的香港落地指导，帮助内地企业顺利拓展香港市场
-            </p>
-          </div>
-          <div class="guide-content">
-            <div class="risk-section">
-              <h3>主要风险与困难</h3>
-              <div class="risk-grid">
-                <div class="risk-card">
-                  <div class="risk-icon">
-                    <span>⚠️</span>
-                  </div>
-                  <h4>违规违法风险</h4>
-                  <div class="risk-card-text">
-                    在香港开公司和雇佣员工主要需遵守《公司条例》和《雇佣条例》，包括注册资本、董事要求、强积金供款等，在某些
-                    <div class="tooltip-container">
-                      <span class="tooltip-trigger">专业领域</span>
-                      <!-- 牌照要求悬浮卡片 -->
-                      <div class="tooltip-card">
-                        <div class="tooltip-header">
-                          <h4>需要申请牌照的行业（按监管严格程度排序）</h4>
-                        </div>
-                        <div class="tooltip-content">
-                          <ul class="license-list">
-                            <li>
-                              金融服务业（证监会1-10号牌照、放债人牌照等）
-                            </li>
-                            <li>餐饮业（食肆牌照、酒牌等）</li>
-                            <li>教育行业（学校注册证明书）</li>
-                            <li>旅游业（旅行代理商牌照）</li>
-                            <li>职业介绍所（劳工处牌照）</li>
-                            <li>通讯行业（电讯牌照）</li>
-                            <li>医疗及健康服务（医生执业证书）</li>
-                            <li>贸易公司（进出口许可证）</li>
-                            <li>零售业务（中药材/动物寄养牌照）</li>
-                            <li>活动管理（公众娱乐/彩票牌照）</li>
-                            <li>专业服务（律师/会计师执照）</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    的业务，需要申请执照
-                  </div>
-                </div>
-                <div class="risk-card">
-                  <div class="risk-icon">
-                    <span>🎯</span>
-                  </div>
-                  <h4>人才招聘难</h4>
-                  <p>
-                    香港人才招聘渠道不明确；如何精准表达公司业务；如何雇佣香港人。
-                  </p>
-                </div>
-                <div class="risk-card">
-                  <div class="risk-icon">
-                    <span>💰</span>
-                  </div>
-                  <h4>管理成本高</h4>
-                  <p>
-                    员工管理规则不清晰；离职是否需要竞业限制金；是否需要付加班费；汰换成本高。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="compliance-section">
-              <h3>实战合规指南</h3>
-              <div class="compliance-grid">
-                <div class="compliance-item">
-                  <div class="compliance-icon">
-                    <span>💼</span>
-                  </div>
-                  <h4>强积金(MPF)供款</h4>
-                  <p>
-                    雇主必为18-65岁雇员供款；雇员月收入≥HK$7,100需自供。雇主/雇员各缴5%，基数范围HK$7,100-HK$30,000。当月第10个工作日前完成，逾期补缴+5%-10%罚款。
-                  </p>
-                </div>
-                <div class="compliance-item">
-                  <div class="compliance-icon">
-                    <span>🛡️</span>
-                  </div>
-                  <h4>劳工保险</h4>
-                  <p>
-                    根据《雇员补偿条例》，未投保雇主最高面临HK$10万罚款+监禁2年。员工因工受伤/患职业病可直接起诉，索赔范围包括医疗费、伤残赔偿、护理费。
-                  </p>
-                </div>
-                <div class="compliance-item">
-                  <div class="compliance-icon">
-                    <span>📋</span>
-                  </div>
-                  <h4>员工离职流程</h4>
-                  <p>
-                    需书面辞职信，确认通知期。7天内支付最后工资，包括薪金、未用年假折算、法定假日补偿。办理强积金停供，并向税务局提交IR56F表格。
-                  </p>
-                </div>
-                <div class="compliance-item">
-                  <div class="compliance-icon">
-                    <span>🎯</span>
-                  </div>
-                  <h4>招聘合规要点</h4>
-                  <p>
-                    禁用年龄/性别/种族歧视表述。面试时避免询问婚姻/生育计划等敏感问题。必查学历验证、工作履历；特殊岗位需查SFC牌照、无犯罪记录。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Team Section -->
-      <section id="team" class="team-experts">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">专家团队</div>
-            <h2 class="section-title">香港本地人力专家介绍</h2>
-            <p class="section-subtitle">横跨深港的资深人力资源和法律金融专家</p>
-          </div>
-
-          <!-- Expert: KY Lee -->
-          <div class="expert-profile">
-            <div class="expert-header">
-              <div class="expert-avatar">
-                <img src="./images/c1.png" alt="KY Lee" />
-              </div>
-              <div class="expert-intro">
-                <h2>KY <span class="last-name">Lee</span></h2>
-                <p>
-                  KY
-                  在香港金融和金融科技企业任职超过13年，先后服务过投资银行及亚洲金融科技初创企业，同时非常理解内地企业的需求
-                </p>
-              </div>
-              <div class="expert-logo">
-                <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
-              </div>
-            </div>
-            <div class="expert-details">
-              <div class="detail-card">
-                <div class="card-title">专业资格</div>
-                <ul>
-                  <li>NLP Certified Practitioner</li>
-                  <li>Australia University HR Management Bachelor</li>
-                  <li>Certificate of HK Employment Ordinance</li>
-                  <li>
-                    Certificate of Effective Recruitment & Selection Interview
-                    Techniques
-                  </li>
-                  <li>
-                    Executive Diploma of Organisational Training & Development
-                  </li>
-                </ul>
-              </div>
-              <div class="detail-card">
-                <div class="card-title">工作经验</div>
-                <ul>
-                  <li>
-                    前投资银行及零售银行人力资源部经理，管理及执行人力资源策略
-                  </li>
-                  <li>
-                    由投资银行经理至亚洲金融科技初创企业的资深人力资源主管，超过10年以上不同国家招聘经验，曾为主要面试官之一，对香港大小型机构面试要求熟悉以及专业招聘市场分析
-                  </li>
-                  <li>本地慈善团体执行副主席，执行多项社区公益会务及活动。</li>
-                  <li>
-                    超过10年国际及本地人才招聘经验，对各行各业人入职需求熟悉。
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Expert: Anthony. Z -->
-          <div class="expert-profile">
-            <div class="expert-header">
-              <div class="expert-avatar">
-                <img src="./images/c2.png" alt="Anthony. Z" />
-              </div>
-              <div class="expert-intro">
-                <h2>Anthony . <span class="last-name">Z</span></h2>
-                <p>
-                  资深法律与金融专家，私募/VC、并购、加密资产领域法律顾问，先后服务过投资银行及亚洲金融科技初创企业
-                </p>
-              </div>
-              <div class="expert-logo">
-                <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
-              </div>
-            </div>
-            <div class="expert-details">
-              <div class="detail-card">
-                <div class="card-title">核心专长</div>
-                <ul>
-                  <li>加密资产与区块链合规、私募/VC、并购(M&A)、跨境交易</li>
-                  <li>
-                    法律架构设计 | 财务建模 | 尽职调查 | 团队搭建与管理 |
-                    复杂谈判
-                  </li>
-                  <li>
-                    全周期服务能力：从初创融资(VC)到企业并购(M&A)的全链条法律支持
-                  </li>
-                  <li>
-                    推动亚洲大型企业重组案例，树立行业先例，覆盖新加坡、中国等多法域项目，精通跨域法律风险管控
-                  </li>
-                </ul>
-              </div>
-              <div class="detail-card">
-                <div class="card-title">工作经验</div>
-                <ul>
-                  <li>
-                    从零组建并领导 20
-                    人专业团队，统筹法律、合规、反洗钱及内部审计职能
-                  </li>
-                  <li>
-                    主导新加坡法院批准的 15
-                    亿美元加密资产重组方案（行业标杆案例）
-                  </li>
-                  <li>国际顶级律所并购与跨境交易经验，服务全球客户</li>
-                  <li>专注私募股权(PE/VC)与并购交易法律支持</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Advantages Section -->
-      <section id="advantages" class="advantages">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">竞争优势</div>
-            <h2 class="section-title">为什么选择SuperLink</h2>
-            <p class="section-subtitle">专业、高效、合规的一站式HR服务优势</p>
-          </div>
-          <div class="advantages-grid">
-            <div class="advantage-card">
-              <div class="advantage-icon">
-                <span>🎆</span>
-              </div>
-              <h3>本地交付</h3>
-              <p>
-                核心团队汇聚香港本地人力资源专家，拥有实战验证的初创企业成长方法论。凭借丰富行业经验，全程护航企业从初创到规模化发展。
-              </p>
-            </div>
-            <div class="advantage-card">
-              <div class="advantage-icon">
-                <span>🛡️</span>
-              </div>
-              <h3>合规</h3>
-              <p>
-                合规团队提供全球法规动态更新与风险预警，配套专业指导与可执行方案，提升企业合规水平。
-              </p>
-            </div>
-            <div class="advantage-card">
-              <div class="advantage-icon">
+          <div class="service-card">
+            <div class="service-number">02</div>
+            <div class="service-icon">
+              <div class="icon-wrapper">
                 <span>⚡</span>
               </div>
-              <h3>效率</h3>
-              <p>
-                Superlink
-                深度整合薪酬、绩效、合规管理功能，通过7*24小时服务，提升效率，降低风险。
-              </p>
             </div>
+            <h3 data-i18n="services.service2.title">敏捷执行</h3>
+            <div class="sub" data-i18n="services.service2.subtitle">全周期人才管理闭环</div>
+            <p data-i18n="services.service2.desc1">招聘：通过行业人脉网络与数字化渠道，精准触达人才</p>
+            <p data-i18n="services.service2.desc2">培养：设计定制化能力提升方案，结合实战项目加速人才融入。</p>
+            <p data-i18n="services.service2.desc3">
+              留存：构建激励体系（长短期目标达成与薪酬/股份的挂钩机制，识别核心员工，重点培养，降低关键岗位流失风险。
+            </p>
           </div>
-          <div class="competitive-analysis">
-            <h3>竞争优势对比</h3>
-            <div class="table-responsive-wrapper">
-              <table class="comparison-table">
-                <thead>
-                  <tr>
-                    <th>服务类型</th>
-                    <th>我方定价</th>
-                    <th>市场高端定价</th>
-                    <th>市场低端定价</th>
-                    <th>竞争优势</th>
-                    <th>客户价值</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>公司注册服务</td>
-                    <td class="highlight">
-                      <strong>8,000 港币</strong
-                      >含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
-                    </td>
-                    <td>
-                      <strong>10,000+ 港币</strong
-                      ><br />含审计预沟通等增值项，但对初创企业非必需。
-                    </td>
-                    <td>
-                      <strong>5,000-7,000 港币</strong><br />仅含注册费,
-                      后续需补缴秘书费(2,000-3,000港币) + 地址费
-                    </td>
-                    <td>
-                      比高端低 20%+, 比低端高 14%-60%,
-                      专注做好服务、做深服务体验
-                    </td>
-                    <td>
-                      节省 30% 精力 (无需比价采购秘书/地址服务), 总成本降低 6%。
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>会计服务</td>
-                    <td class="highlight">
-                      <strong>10,000 港币/年</strong>财务报表编制 + 税务申报 +
-                      年度审计协助
-                    </td>
-                    <td>
-                      <strong>15,000+ 港币/年</strong><br />含财务分析 +
-                      战略咨询 但中小企业使用率不足 20%。
-                    </td>
-                    <td>
-                      <strong>8,000-16,000 港币/年</strong><br />仅申报税务,
-                      无报表编制, 审计需额外付费 3,000+港币
-                    </td>
-                    <td>比高端低 33%, 比低端高 25%-67%, 确保客户安心</td>
-                    <td>覆盖 90% 常规需求, 避免为闲置功能付费。</td>
-                  </tr>
-                </tbody>
-              </table>
-                          
-              <!-- Mobile Cards for Comparison Table -->
-              <div class="comparison-table-mobile">
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">公司注册服务</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我方定价</div>
-                    <div class="mobile-card-value highlight">
-                      <strong>8,000 港币</strong>
-                      含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场高端定价</div>
-                    <div class="mobile-card-value">
-                      <strong>10,000+ 港币</strong>
-                      含审计预沟通等增值项，但对初创企业非必需。
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场低端定价</div>
-                    <div class="mobile-card-value">
-                      <strong>5,000-7,000 港币</strong>
-                      仅含注册费, 后续需补缴秘书费(2,000-3,000港币) + 地址费
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">竞争优势</div>
-                    <div class="mobile-card-value">
-                      比高端低 20%+, 比低端高 14%-60%, 专注做好服务、做深服务体验
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">客户价值</div>
-                    <div class="mobile-card-value">
-                      节省 30% 精力 (无需比价采购秘书/地址服务), 总成本降低 6%。
-                    </div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">会计服务</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我方定价</div>
-                    <div class="mobile-card-value highlight">
-                      <strong>10,000 港币/年</strong>
-                      财务报表编制 + 税务申报 + 年度审计协助
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场高端定价</div>
-                    <div class="mobile-card-value">
-                      <strong>15,000+ 港币/年</strong>
-                      含财务分析 + 战略咨询 但中小企业使用率不足 20%。
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场低端定价</div>
-                    <div class="mobile-card-value">
-                      <strong>8,000-16,000 港币/年</strong>
-                      仅申报税务, 无报表编制, 审计需额外付费 3,000+港币
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">竞争优势</div>
-                    <div class="mobile-card-value">
-                      比高端低 33%, 比低端高 25%-67%, 确保客户安心
-                    </div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">客户价值</div>
-                    <div class="mobile-card-value">
-                      覆盖 90% 常规需求, 避免为闲置功能付费。
-                    </div>
-                  </div>
-                </div>
+          <div class="service-card">
+            <div class="service-number">03</div>
+            <div class="service-icon">
+              <div class="icon-wrapper">
+                <span>🌐</span>
               </div>
             </div>
-          </div>
-
-          <div class="price-comparison">
-            <h3>服务价格对比</h3>
-            <div class="table-responsive-wrapper">
-              <table class="price-comparison-table">
-                <thead>
-                  <tr>
-                    <th>项目</th>
-                    <th>最低配置成本</th>
-                    <th>我们的建议服务价格 (港币)</th>
-                    <th>市场常见服务价格 (港币)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>注册费用</td>
-                    <td>无实体办公，使用虚拟地址</td>
-                    <td>$8000 (包含注册、秘书、地址)</td>
-                    <td>$5000-$10000</td>
-                  </tr>
-                  <tr>
-                    <td>办公场所租金</td>
-                    <td>共享办公室</td>
-                    <td>$180,000 - $220,000/年</td>
-                    <td>$200,000 - $260,000/年</td>
-                  </tr>
-                  <tr>
-                    <td>人力资源成本</td>
-                    <td>无员工, 仅创始人</td>
-                    <td>$600,000 $900,000 (3-5员工)</td>
-                    <td>$1,080,000 - $1,800,000 (3-5员工)</td>
-                  </tr>
-                  <tr>
-                    <td>会计与审计费用</td>
-                    <td>基础会计服务</td>
-                    <td>$10000/年</td>
-                    <td>$6000-$15000/年</td>
-                  </tr>
-                  <tr>
-                    <td>公司秘书费</td>
-                    <td>必须聘请</td>
-                    <td>$8,000 - $13,500/年</td>
-                    <td>$15,000 - $20,000/年</td>
-                  </tr>
-                  <tr>
-                    <td>商标注册费用</td>
-                    <td>选择性支出</td>
-                    <td>$8000</td>
-                    <td>$5000-$10000</td>
-                  </tr>
-                  <tr>
-                    <td>法务咨询费用</td>
-                    <td>按需选择</td>
-                    <td>$5000/次</td>
-                    <td>$2000-$8000/次</td>
-                  </tr>
-                  <tr>
-                    <td>服务器租赁费用</td>
-                    <td>基础服务器</td>
-                    <td>$1000/月</td>
-                    <td>$500-$2000/月</td>
-                  </tr>
-                </tbody>
-              </table>
-                          
-              <!-- Mobile Cards for Price Comparison Table -->
-              <div class="price-comparison-mobile">
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">注册费用</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">最低配置</div>
-                    <div class="mobile-card-value">无实体办公，使用虚拟地址</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我们的价格</div>
-                    <div class="mobile-card-value highlight">$8000 (包含注册、秘书、地址)</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场价格</div>
-                    <div class="mobile-card-value">$5000-$10000</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">办公场所租金</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">最低配置</div>
-                    <div class="mobile-card-value">共享办公室</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我们的价格</div>
-                    <div class="mobile-card-value highlight">$180,000 - $220,000/年</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场价格</div>
-                    <div class="mobile-card-value">$200,000 - $260,000/年</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">人力资源成本</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">最低配置</div>
-                    <div class="mobile-card-value">无员工, 仅创始人</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我们的价格</div>
-                    <div class="mobile-card-value highlight">$600,000 - $900,000 (3-5员工)</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场价格</div>
-                    <div class="mobile-card-value">$1,080,000 - $1,800,000 (3-5员工)</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">会计与审计费用</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">最低配置</div>
-                    <div class="mobile-card-value">基础会计服务</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我们的价格</div>
-                    <div class="mobile-card-value highlight">$10000/年</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场价格</div>
-                    <div class="mobile-card-value">$6000-$15000/年</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">公司秘书费</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">最低配置</div>
-                    <div class="mobile-card-value">必须聘请</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">我们的价格</div>
-                    <div class="mobile-card-value highlight">$8,000 - $13,500/年</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">市场价格</div>
-                    <div class="mobile-card-value">$15,000 - $20,000/年</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">其他费用</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">商标注册</div>
-                    <div class="mobile-card-value">我们: <strong>$8000</strong> | 市场: $5000-$10000</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">法务咨询</div>
-                    <div class="mobile-card-value">我们: <strong>$5000/次</strong> | 市场: $2000-$8000/次</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">服务器租赁</div>
-                    <div class="mobile-card-value">我们: <strong>$1000/月</strong> | 市场: $500-$2000/月</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="housekeeper-price">
-            <h3>管家服务价格说明</h3>
-            <div class="table-responsive-wrapper">
-              <table class="housekeeper-price-table">
-                <thead>
-                  <tr>
-                    <th>服务类型</th>
-                    <th>定价</th>
-                    <th>服务模式</th>
-                    <th>具体说明</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td rowspan="2">HR管家服务</td>
-                    <td>100,000 港币/年</td>
-                    <td>半托管</td>
-                    <td>不需要人才招募服务</td>
-                  </tr>
-                  <tr>
-                    <td>200,000 港币/年</td>
-                    <td>全托管</td>
-                    <td>包含人才招募服务</td>
-                  </tr>
-                </tbody>
-              </table>
-                          
-              <!-- Mobile Cards for Housekeeper Price Table -->
-              <div class="housekeeper-price-mobile">
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">HR管家服务 - 半托管</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">定价</div>
-                    <div class="mobile-card-value highlight"><strong>100,000 港币/年</strong></div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">服务模式</div>
-                    <div class="mobile-card-value">半托管</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">具体说明</div>
-                    <div class="mobile-card-value">不需要人才招募服务</div>
-                  </div>
-                </div>
-                            
-                <div class="mobile-table-card">
-                  <div class="mobile-card-header">HR管家服务 - 全托管</div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">定价</div>
-                    <div class="mobile-card-value highlight"><strong>200,000 港币/年</strong></div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">服务模式</div>
-                    <div class="mobile-card-value">全托管</div>
-                  </div>
-                  <div class="mobile-card-row">
-                    <div class="mobile-card-label">具体说明</div>
-                    <div class="mobile-card-value">包含人才招募服务</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="details-button-wrapper">
-              <a href="services-details.html" class="btn btn-primary">
-                <span>了解详细</span>
-                <div class="btn-glow"></div>
-              </a>
-            </div>
+            <h3 data-i18n="services.service3.title">专业支持</h3>
+            <div class="sub" data-i18n="services.service3.subtitle">建立远程雇佣体系</div>
+            <p data-i18n="services.service3.desc1">支持跨境员工招聘、远程办公政策设计与合规支持。</p>
+            <p data-i18n="services.service3.desc2">
+              具备跨境服务能力（如外籍员工签证支持）助力企业布局亚洲市场。
+            </p>
           </div>
         </div>
-      </section>
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="contact-wrapper">
-            <div class="contact-info">
-              <div class="section-badge">立即咨询</div>
-              <h2>立即扫码咨询，我们做你香港人力管家</h2>
-              <p>扫码咨询，获取专业的HR服务方案</p>
-
-              <div class="contact-methods">
-                <div class="contact-method">
-                  <div class="method-icon">
-                    <span>🏢</span>
-                  </div>
-                  <div class="method-details">
-                    <h4>公司名称</h4>
-                    <p>SuperLink Consulting  执一人力资源咨询有限公司。</p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon">
-                    <span>📧</span>
-                  </div>
-                  <div class="method-details">
-                    <h4>邮箱联系</h4>
-                    <p>aisuperlink@gmail.com</p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon">
-                    <span>📱</span>
-                  </div>
-                  <div class="method-details">
-                    <h4>电话咨询</h4>
-                    <p>00852 65245118</p>
-                  </div>
-                </div>
-               
-              </div>
-
+        <div class="service-pricing">
+          <h3 data-i18n="services.pricingTitle">服务价格</h3>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h4 data-i18n="services.pricing1Title">半托管服务</h4>
+              <div class="price" data-i18n="services.pricing1Price">10万港币/年</div>
+              <p data-i18n="services.pricing1Desc">不包含人才招募服务</p>
             </div>
-
-            <div class="contact-form">
-              <h3>联系我们</h3>
-              <form class="form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <input type="text" placeholder="您的姓名" required />
-                    <div class="input-glow"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" placeholder="邮箱地址" required />
-                    <div class="input-glow"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="公司名称" required />
-                  <div class="input-glow"></div>
-                </div>
-                <div class="form-group">
-                  <select required>
-                    <option value="">选择企业类型</option>
-                    <option value="ai">人工智能</option>
-                    <option value="robotics">机器人</option>
-                    <option value="biotech">生物医药</option>
-                    <option value="fintech">金融科技</option>
-                    <option value="materials">新材料</option>
-                    <option value="electronics">消费电子</option>
-                    <option value="other">其他</option>
-                  </select>
-                  <div class="input-glow"></div>
-                </div>
-                <div class="form-group">
-                  <textarea
-                    placeholder="您的需求和问题"
-                    rows="4"
-                    required
-                  ></textarea>
-                  <div class="input-glow"></div>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  <span>获取咨询</span>
-                  <div class="btn-glow"></div>
-                </button>
-              </form>
+            <div class="pricing-card featured">
+              <h4 data-i18n="services.pricing2Title">全托管服务</h4>
+              <div class="price" data-i18n="services.pricing2Price">20万港币/年</div>
+              <p data-i18n="services.pricing2Desc">包含人才招募服务</p>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" class="footer-logo-img">
-            <p>极致链接，专注助力内地科创企业高效拓展香港市场</p>
-            
-             <img src="images/qrcode.png" alt="二维码"  class="qrcode"></img>
-          </div>
-          <div class="footer-links">
-            <div class="link-group">
-              <h4>核心服务</h4>
-              <a href="#services">人才招聘</a>
-              <a href="#services">薪酬合规</a>
-              <a href="#services">团队管理</a>
-              <a href="#services">远程雇佣</a>
-            </div>
-            <div class="link-group">
-              <h4>关于我们</h4>
-              <a href="#about">公司介绍</a>
-              <a href="#team">专家团队</a>
-              <a href="#contact">联系我们</a>
-            </div>
-            <div class="link-group">
-              <h4>实用资源</h4>
-              <a href="#guide">香港落地指南</a>
-              <a href="practical-guide.html">实战指南</a>
-              <a href="#">合规手册下载</a>
-              <a href="#advantages">服务优势</a>
-              <a href="#target-clients">适用企业</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 SuperLink Consulting. 版权所有</p>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <style>
-  .back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: #ff6b35;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    z-index: 999;
-  }
-  .back-to-top:hover {
-    background: #ff4500;
-    transform: translateY(-3px);
-  }
-</style>
-<div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-  ↑
-</div>
-<script src="script.js"></script>
-  </body>
+    <!-- Hong Kong Guide Section -->
+    <section id="guide" class="guide">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="guide.badge">香港落地指南</div>
+          <h2 class="section-title" data-i18n="guide.title">解决落地困难，降低合规风险</h2>
+          <p class="section-subtitle" data-i18n="guide.subtitle">
+            全面的香港落地指导，帮助内地企业顺利拓展香港市场
+          </p>
+        </div>
+        <div class="guide-content">
+          <div class="risk-section">
+            <h3 data-i18n="guide.risksTitle">主要风险与困难</h3>
+            <div class="risk-grid">
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <span>⚠️</span>
+                </div>
+                <h4 data-i18n="guide.risk1.title">违规违法风险</h4>
+                <div class="risk-card-text">
+                  <span data-i18n="guide.risk1.desc">
+                    在香港开公司和雇佣员工主要需遵守《公司条例》和《雇佣条例》，包括注册资本、董事要求、强积金供款等，在某些</span>
+                  <div class="tooltip-container">
+                    <span class="tooltip-trigger" data-i18n="guide.risk1.tooltip.trigger">专业领域</span>
+                    <!-- 牌照要求悬浮卡片 -->
+                    <div class="tooltip-card">
+                      <div class="tooltip-header">
+                        <h4 data-i18n="guide.risk1.tooltip.title">需要申请牌照的行业（按监管严格程度排序）</h4>
+                      </div>
+                      <div class="tooltip-content">
+                        <ul class="license-list">
+                          <li data-i18n="guide.risk1.tooltip.items.0">
+                            金融服务业（证监会1-10号牌照、放债人牌照等）
+                          </li>
+                          <li data-i18n="guide.risk1.tooltip.items.1">餐饮业（食肆牌照、酒牌等）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.2">教育行业（学校注册证明书）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.3">旅游业（旅行代理商牌照）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.4">职业介绍所（劳工处牌照）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.5">通讯行业（电讯牌照）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.6">医疗及健康服务（医生执业证书）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.7">贸易公司（进出口许可证）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.8">零售业务（中药材/动物寄养牌照）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.9">活动管理（公众娱乐/彩票牌照）</li>
+                          <li data-i18n="guide.risk1.tooltip.items.10">专业服务（律师/会计师执照）</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <span>的业务，需要申请执照</span>
+                </div>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <span>🎯</span>
+                </div>
+                <h4 data-i18n="guide.risk2.title">人才招聘难</h4>
+                <p data-i18n="guide.risk2.desc">
+                  香港人才招聘渠道不明确；如何精准表达公司业务；如何雇佣香港人。
+                </p>
+              </div>
+              <div class="risk-card">
+                <div class="risk-icon">
+                  <span>💰</span>
+                </div>
+                <h4 data-i18n="guide.risk3.title">管理成本高</h4>
+                <p data-i18n="guide.risk3.desc">
+                  员工管理规则不清晰；离职是否需要竞业限制金；是否需要付加班费；汰换成本高。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="compliance-section">
+            <h3 data-i18n="guide.complianceTitle">实战合规指南</h3>
+            <div class="compliance-grid">
+              <div class="compliance-item">
+                <div class="compliance-icon">
+                  <span>💼</span>
+                </div>
+                <h4 data-i18n="guide.compliance1.title">强积金(MPF)供款</h4>
+                <p data-i18n="guide.compliance1.desc">
+                  雇主必为18-65岁雇员供款；雇员月收入≥HK$7,100需自供。雇主/雇员各缴5%，基数范围HK$7,100-HK$30,000。当月第10个工作日前完成，逾期补缴+5%-10%罚款。
+                </p>
+              </div>
+              <div class="compliance-item">
+                <div class="compliance-icon">
+                  <span>🛡️</span>
+                </div>
+                <h4 data-i18n="guide.compliance2.title">劳工保险</h4>
+                <p data-i18n="guide.compliance2.desc">
+                  根据《雇员补偿条例》，未投保雇主最高面临HK$10万罚款+监禁2年。员工因工受伤/患职业病可直接起诉，索赔范围包括医疗费、伤残赔偿、护理费。
+                </p>
+              </div>
+              <div class="compliance-item">
+                <div class="compliance-icon">
+                  <span>📋</span>
+                </div>
+                <h4 data-i18n="guide.compliance3.title">员工离职流程</h4>
+                <p data-i18n="guide.compliance3.desc">
+                  需书面辞职信，确认通知期。7天内支付最后工资，包括薪金、未用年假折算、法定假日补偿。办理强积金停供，并向税务局提交IR56F表格。
+                </p>
+              </div>
+              <div class="compliance-item">
+                <div class="compliance-icon">
+                  <span>🎯</span>
+                </div>
+                <h4 data-i18n="guide.compliance4.title">招聘合规要点</h4>
+                <p data-i18n="guide.compliance4.desc">
+                  禁用年龄/性别/种族歧视表述。面试时避免询问婚姻/生育计划等敏感问题。必查学历验证、工作履历；特殊岗位需查SFC牌照、无犯罪记录。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-experts">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="team.badge">专家团队</div>
+          <h2 class="section-title" data-i18n="team.title">香港本地人力专家介绍</h2>
+          <p class="section-subtitle" data-i18n="team.subtitle">横跨深港的资深人力资源和法律金融专家</p>
+        </div>
+
+        <!-- Expert: KY Lee -->
+        <div class="expert-profile">
+          <div class="expert-header">
+            <div class="expert-avatar">
+              <img src="./images/c1.png" alt="KY Lee" />
+            </div>
+            <div class="expert-intro">
+              <h2 data-i18n="team.expert1.name">KY <span class="last-name">Lee</span></h2>
+              <p data-i18n="team.expert1.intro">
+                KY
+                在香港金融和金融科技企业任职超过13年，先后服务过投资银行及亚洲金融科技初创企业，同时非常理解内地企业的需求
+              </p>
+            </div>
+            <div class="expert-logo">
+              <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
+            </div>
+          </div>
+          <div class="expert-details">
+            <div class="detail-card">
+              <div class="card-title" data-i18n="team.expert1.qualificationTitle">专业资格</div>
+              <ul>
+                <li data-i18n="team.expert1.qualifications.0">NLP Certified Practitioner</li>
+                <li data-i18n="team.expert1.qualifications.1">Australia University HR Management Bachelor</li>
+                <li data-i18n="team.expert1.qualifications.2">Certificate of HK Employment Ordinance</li>
+                <li data-i18n="team.expert1.qualifications.3">
+                  Certificate of Effective Recruitment & Selection Interview
+                  Techniques
+                </li>
+                <li data-i18n="team.expert1.qualifications.4">
+                  Executive Diploma of Organisational Training & Development
+                </li>
+              </ul>
+            </div>
+            <div class="detail-card">
+              <div class="card-title" data-i18n="team.expert1.experienceTitle">工作经验</div>
+              <ul>
+                <li data-i18n="team.expert1.experiences.0">
+                  前投资银行及零售银行人力资源部经理，管理及执行人力资源策略
+                </li>
+                <li data-i18n="team.expert1.experiences.1">
+                  由投资银行经理至亚洲金融科技初创企业的资深人力资源主管，超过10年以上不同国家招聘经验，曾为主要面试官之一，对香港大小型机构面试要求熟悉以及专业招聘市场分析
+                </li>
+                <li data-i18n="team.expert1.experiences.2">本地慈善团体执行副主席，执行多项社区公益会务及活动。</li>
+                <li data-i18n="team.expert1.experiences.3">
+                  超过10年国际及本地人才招聘经验，对各行各业人入职需求熟悉。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expert: Anthony. Z -->
+        <div class="expert-profile">
+          <div class="expert-header">
+            <div class="expert-avatar">
+              <img src="./images/c2.png" alt="Anthony. Z" />
+            </div>
+            <div class="expert-intro">
+              <h2 data-i18n="team.expert2.name">Anthony . <span class="last-name">Z</span></h2>
+              <p data-i18n="team.expert2.intro">
+                资深法律与金融专家，私募/VC、并购、加密资产领域法律顾问，先后服务过投资银行及亚洲金融科技初创企业
+              </p>
+            </div>
+            <div class="expert-logo">
+              <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" />
+            </div>
+          </div>
+          <div class="expert-details">
+            <div class="detail-card">
+              <div class="card-title" data-i18n="team.expert2.qualificationTitle">核心专长</div>
+              <ul>
+                <li data-i18n="team.expert2.qualifications.0">加密资产与区块链合规、私募/VC、并购(M&A)、跨境交易</li>
+                <li data-i18n="team.expert2.qualifications.1">
+                  法律架构设计 | 财务建模 | 尽职调查 | 团队搭建与管理 |
+                  复杂谈判
+                </li>
+                <li data-i18n="team.expert2.qualifications.2">
+                  全周期服务能力：从初创融资(VC)到企业并购(M&A)的全链条法律支持
+                </li>
+                <li data-i18n="team.expert2.qualifications.3">
+                  推动亚洲大型企业重组案例，树立行业先例，覆盖新加坡、中国等多法域项目，精通跨域法律风险管控
+                </li>
+              </ul>
+            </div>
+            <div class="detail-card">
+              <div class="card-title" data-i18n="team.expert2.experienceTitle">工作经验</div>
+              <ul>
+                <li data-i18n="team.expert2.experiences.0">
+                  从零组建并领导 20
+                  人专业团队，统筹法律、合规、反洗钱及内部审计职能
+                </li>
+                <li data-i18n="team.expert2.experiences.1">
+                  主导新加坡法院批准的 15
+                  亿美元加密资产重组方案（行业标杆案例）
+                </li>
+                <li data-i18n="team.expert2.experiences.2">国际顶级律所并购与跨境交易经验，服务全球客户</li>
+                <li data-i18n="team.expert2.experiences.3">专注私募股权(PE/VC)与并购交易法律支持</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="advantages">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="advantages.badge">竞争优势</div>
+          <h2 class="section-title" data-i18n="advantages.title">为什么选择SuperLink</h2>
+          <p class="section-subtitle" data-i18n="advantages.subtitle">专业、高效、合规的一站式HR服务优势</p>
+        </div>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <span>🎆</span>
+            </div>
+            <h3 data-i18n="advantages.advantage1.title">本地交付</h3>
+            <p data-i18n="advantages.advantage1.desc">
+              核心团队汇聚香港本地人力资源专家，拥有实战验证的初创企业成长方法论。凭借丰富行业经验，全程护航企业从初创到规模化发展。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <span>🛡️</span>
+            </div>
+            <h3 data-i18n="advantages.advantage2.title">合规</h3>
+            <p data-i18n="advantages.advantage2.desc">
+              合规团队提供全球法规动态更新与风险预警，配套专业指导与可执行方案，提升企业合规水平。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <span>⚡</span>
+            </div>
+            <h3 data-i18n="advantages.advantage3.title">效率</h3>
+            <p data-i18n="advantages.advantage3.desc">
+              Superlink
+              深度整合薪酬、绩效、合规管理功能，通过7*24小时服务，提升效率，降低风险。
+            </p>
+          </div>
+        </div>
+        <div class="competitive-analysis">
+          <h3 data-i18n="advantages.comparisonTitle">竞争优势对比</h3>
+          <div class="table-responsive-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th data-i18n="advantages.comparisonTable.headers.0">服务类型</th>
+                  <th data-i18n="advantages.comparisonTable.headers.1">我方定价</th>
+                  <th data-i18n="advantages.comparisonTable.headers.2">市场高端定价</th>
+                  <th data-i18n="advantages.comparisonTable.headers.3">市场低端定价</th>
+                  <th data-i18n="advantages.comparisonTable.headers.4">竞争优势</th>
+                  <th data-i18n="advantages.comparisonTable.headers.5">客户价值</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="advantages.comparisonTable.rows.registration.service">公司注册服务</td>
+                  <td class="highlight" data-i18n="advantages.comparisonTable.rows.registration.ourPrice">
+                    <strong>8,000 港币</strong>含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.registration.highEndPrice">
+                    <strong>10,000+ 港币</strong><br />含审计预沟通等增值项，但对初创企业非必需。
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.registration.lowEndPrice">
+                    <strong>5,000-7,000 港币</strong><br />仅含注册费,
+                    后续需补缴秘书费(2,000-3,000港币) + 地址费
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.registration.advantage">
+                    比高端低 20%+, 比低端高 14%-60%,
+                    专注做好服务、做深服务体验
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.registration.value">
+                    节省 30% 精力 (无需比价采购秘书/地址服务), 总成本降低 6%。
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.comparisonTable.rows.accounting.service">会计服务</td>
+                  <td class="highlight" data-i18n="advantages.comparisonTable.rows.accounting.ourPrice">
+                    <strong>10,000 港币/年</strong>财务报表编制 + 税务申报 +
+                    年度审计协助
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.accounting.highEndPrice">
+                    <strong>15,000+ 港币/年</strong><br />含财务分析 +
+                    战略咨询 但中小企业使用率不足 20%。
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.accounting.lowEndPrice">
+                    <strong>8,000-16,000 港币/年</strong><br />仅申报税务,
+                    无报表编制, 审计需额外付费 3,000+港币
+                  </td>
+                  <td data-i18n="advantages.comparisonTable.rows.accounting.advantage">比高端低 33%, 比低端高 25%-67%, 确保客户安心</td>
+                  <td data-i18n="advantages.comparisonTable.rows.accounting.value">覆盖 90% 常规需求, 避免为闲置功能付费。</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Mobile Cards for Comparison Table -->
+            <div class="comparison-table-mobile">
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">公司注册服务</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我方定价</div>
+                  <div class="mobile-card-value highlight">
+                    <strong>8,000 港币</strong>
+                    含注册费+公司秘书费+地址费(有效期1年) 无隐性收费
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场高端定价</div>
+                  <div class="mobile-card-value">
+                    <strong>10,000+ 港币</strong>
+                    含审计预沟通等增值项，但对初创企业非必需。
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场低端定价</div>
+                  <div class="mobile-card-value">
+                    <strong>5,000-7,000 港币</strong>
+                    仅含注册费, 后续需补缴秘书费(2,000-3,000港币) + 地址费
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">竞争优势</div>
+                  <div class="mobile-card-value">
+                    比高端低 20%+, 比低端高 14%-60%, 专注做好服务、做深服务体验
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">客户价值</div>
+                  <div class="mobile-card-value">
+                    节省 30% 精力 (无需比价采购秘书/地址服务), 总成本降低 6%。
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">会计服务</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我方定价</div>
+                  <div class="mobile-card-value highlight">
+                    <strong>10,000 港币/年</strong>
+                    财务报表编制 + 税务申报 + 年度审计协助
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场高端定价</div>
+                  <div class="mobile-card-value">
+                    <strong>15,000+ 港币/年</strong>
+                    含财务分析 + 战略咨询 但中小企业使用率不足 20%。
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场低端定价</div>
+                  <div class="mobile-card-value">
+                    <strong>8,000-16,000 港币/年</strong>
+                    仅申报税务, 无报表编制, 审计需额外付费 3,000+港币
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">竞争优势</div>
+                  <div class="mobile-card-value">
+                    比高端低 33%, 比低端高 25%-67%, 确保客户安心
+                  </div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">客户价值</div>
+                  <div class="mobile-card-value">
+                    覆盖 90% 常规需求, 避免为闲置功能付费。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-comparison">
+          <h3 data-i18n="advantages.priceComparisonTitle">服务价格对比</h3>
+          <div class="table-responsive-wrapper">
+            <table class="price-comparison-table">
+              <thead>
+                <tr>
+                  <th data-i18n="advantages.priceTable.headers.0">项目</th>
+                  <th data-i18n="advantages.priceTable.headers.1">最低配置成本</th>
+                  <th data-i18n="advantages.priceTable.headers.2">我们的建议服务价格 (港币)</th>
+                  <th data-i18n="advantages.priceTable.headers.3">市场常见服务价格 (港币)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.registration.item">注册费用</td>
+                  <td data-i18n="advantages.priceTable.rows.registration.minConfig">无实体办公，使用虚拟地址</td>
+                  <td data-i18n="advantages.priceTable.rows.registration.ourPrice">$8000 (包含注册、秘书、地址)</td>
+                  <td data-i18n="advantages.priceTable.rows.registration.marketPrice">$5000-$10000</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.office.item">办公场所租金</td>
+                  <td data-i18n="advantages.priceTable.rows.office.minConfig">共享办公室</td>
+                  <td data-i18n="advantages.priceTable.rows.office.ourPrice">$180,000 - $220,000/年</td>
+                  <td data-i18n="advantages.priceTable.rows.office.marketPrice">$200,000 - $260,000/年</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.hr.item">人力资源成本</td>
+                  <td data-i18n="advantages.priceTable.rows.hr.minConfig">无员工, 仅创始人</td>
+                  <td data-i18n="advantages.priceTable.rows.hr.ourPrice">$600,000 - $900,000 (3-5员工)</td>
+                  <td data-i18n="advantages.priceTable.rows.hr.marketPrice">$1,080,000 - $1,800,000 (3-5员工)</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.accounting.item">会计与审计费用</td>
+                  <td data-i18n="advantages.priceTable.rows.accounting.minConfig">基础会计服务</td>
+                  <td data-i18n="advantages.priceTable.rows.accounting.ourPrice">$10000/年</td>
+                  <td data-i18n="advantages.priceTable.rows.accounting.marketPrice">$6000-$15000/年</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.secretary.item">公司秘书费</td>
+                  <td data-i18n="advantages.priceTable.rows.secretary.minConfig">必须聘请</td>
+                  <td data-i18n="advantages.priceTable.rows.secretary.ourPrice">$8,000 - $13,500/年</td>
+                  <td data-i18n="advantages.priceTable.rows.secretary.marketPrice">$15,000 - $20,000/年</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.trademark.item">商标注册费用</td>
+                  <td data-i18n="advantages.priceTable.rows.trademark.minConfig">选择性支出</td>
+                  <td data-i18n="advantages.priceTable.rows.trademark.ourPrice">$8000</td>
+                  <td data-i18n="advantages.priceTable.rows.trademark.marketPrice">$5000-$10000</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.legal.item">法务咨询费用</td>
+                  <td data-i18n="advantages.priceTable.rows.legal.minConfig">按需选择</td>
+                  <td data-i18n="advantages.priceTable.rows.legal.ourPrice">$5000/次</td>
+                  <td data-i18n="advantages.priceTable.rows.legal.marketPrice">$2000-$8000/次</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.priceTable.rows.server.item">服务器租赁费用</td>
+                  <td data-i18n="advantages.priceTable.rows.server.minConfig">基础服务器</td>
+                  <td data-i18n="advantages.priceTable.rows.server.ourPrice">$1000/月</td>
+                  <td data-i18n="advantages.priceTable.rows.server.marketPrice">$500-$2000/月</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Mobile Cards for Price Comparison Table -->
+            <div class="price-comparison-mobile">
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">注册费用</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">最低配置</div>
+                  <div class="mobile-card-value">无实体办公，使用虚拟地址</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我们的价格</div>
+                  <div class="mobile-card-value highlight">$8000 (包含注册、秘书、地址)</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场价格</div>
+                  <div class="mobile-card-value">$5000-$10000</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">办公场所租金</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">最低配置</div>
+                  <div class="mobile-card-value">共享办公室</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我们的价格</div>
+                  <div class="mobile-card-value highlight">$180,000 - $220,000/年</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场价格</div>
+                  <div class="mobile-card-value">$200,000 - $260,000/年</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">人力资源成本</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">最低配置</div>
+                  <div class="mobile-card-value">无员工, 仅创始人</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我们的价格</div>
+                  <div class="mobile-card-value highlight">$600,000 - $900,000 (3-5员工)</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场价格</div>
+                  <div class="mobile-card-value">$1,080,000 - $1,800,000 (3-5员工)</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">会计与审计费用</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">最低配置</div>
+                  <div class="mobile-card-value">基础会计服务</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我们的价格</div>
+                  <div class="mobile-card-value highlight">$10000/年</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场价格</div>
+                  <div class="mobile-card-value">$6000-$15000/年</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">公司秘书费</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">最低配置</div>
+                  <div class="mobile-card-value">必须聘请</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">我们的价格</div>
+                  <div class="mobile-card-value highlight">$8,000 - $13,500/年</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">市场价格</div>
+                  <div class="mobile-card-value">$15,000 - $20,000/年</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">其他费用</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">商标注册</div>
+                  <div class="mobile-card-value">我们: <strong>$8000</strong> | 市场: $5000-$10000</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">法务咨询</div>
+                  <div class="mobile-card-value">我们: <strong>$5000/次</strong> | 市场: $2000-$8000/次</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">服务器租赁</div>
+                  <div class="mobile-card-value">我们: <strong>$1000/月</strong> | 市场: $500-$2000/月</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="housekeeper-price">
+          <h3 data-i18n="advantages.housekeeperTitle">管家服务价格说明</h3>
+          <div class="table-responsive-wrapper">
+            <table class="housekeeper-price-table">
+              <thead>
+                <tr>
+                  <th data-i18n="advantages.housekeeperTable.headers.0">服务类型</th>
+                  <th data-i18n="advantages.housekeeperTable.headers.1">定价</th>
+                  <th data-i18n="advantages.housekeeperTable.headers.2">服务模式</th>
+                  <th data-i18n="advantages.housekeeperTable.headers.3">具体说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" data-i18n="advantages.housekeeperTable.rows.semiManaged.service">HR管家服务</td>
+                  <td data-i18n="advantages.housekeeperTable.rows.semiManaged.price">100,000 港币/年</td>
+                  <td data-i18n="advantages.housekeeperTable.rows.semiManaged.model">半托管</td>
+                  <td data-i18n="advantages.housekeeperTable.rows.semiManaged.description">不需要人才招募服务</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advantages.housekeeperTable.rows.fullyManaged.price">200,000 港币/年</td>
+                  <td data-i18n="advantages.housekeeperTable.rows.fullyManaged.model">全托管</td>
+                  <td data-i18n="advantages.housekeeperTable.rows.fullyManaged.description">包含人才招募服务</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Mobile Cards for Housekeeper Price Table -->
+            <div class="housekeeper-price-mobile">
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">HR管家服务 - 半托管</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">定价</div>
+                  <div class="mobile-card-value highlight"><strong>100,000 港币/年</strong></div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">服务模式</div>
+                  <div class="mobile-card-value">半托管</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">具体说明</div>
+                  <div class="mobile-card-value">不需要人才招募服务</div>
+                </div>
+              </div>
+
+              <div class="mobile-table-card">
+                <div class="mobile-card-header">HR管家服务 - 全托管</div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">定价</div>
+                  <div class="mobile-card-value highlight"><strong>200,000 港币/年</strong></div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">服务模式</div>
+                  <div class="mobile-card-value">全托管</div>
+                </div>
+                <div class="mobile-card-row">
+                  <div class="mobile-card-label">具体说明</div>
+                  <div class="mobile-card-value">包含人才招募服务</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details-button-wrapper">
+            <a href="services-details.html" class="btn btn-primary">
+              <span data-i18n="konw more">了解详细</span>
+              <div class="btn-glow"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="section-badge" data-i18n="contact.badge">立即咨询</div>
+            <h2 data-i18n="contact.title">立即扫码咨询，我们做你香港人力管家</h2>
+            <p data-i18n="contact.subtitle">扫码咨询，获取专业的HR服务方案</p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <span>🏢</span>
+                </div>
+                <div class="method-details">
+                  <h4 data-i18n="contact.company.title">公司名称</h4>
+                  <p data-i18n="contact.company.desc">SuperLink Consulting 执一人力资源咨询有限公司。</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">
+                  <span>📧</span>
+                </div>
+                <div class="method-details">
+                  <h4 data-i18n="contact.email.title">邮箱联系</h4>
+                  <p data-i18n="contact.email.desc">aisuperlink@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">
+                  <span>📱</span>
+                </div>
+                <div class="method-details">
+                  <h4 data-i18n="contact.phone.title">电话咨询</h4>
+                  <p data-i18n="contact.phone.desc">00852 65245118</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="contact-form">
+            <h3 data-i18n="contact.form.title">联系我们</h3>
+            <form class="form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" data-i18n-placeholder="contact.form.name" placeholder="您的姓名" required />
+                  <div class="input-glow"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" data-i18n-placeholder="contact.form.email" placeholder="邮箱地址" required />
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" data-i18n-placeholder="contact.form.company" placeholder="公司名称" required />
+                <div class="input-glow"></div>
+              </div>
+              <div class="form-group">
+                <select required>
+                  <option value="" data-i18n="contact.form.types.default">选择企业类型</option>
+                  <option value="ai" data-i18n="contact.form.types.ai">人工智能</option>
+                  <option value="robotics" data-i18n="contact.form.types.robotics">机器人</option>
+                  <option value="biotech" data-i18n="contact.form.types.biotech">生物医药</option>
+                  <option value="fintech" data-i18n="contact.form.types.fintech">金融科技</option>
+                  <option value="materials" data-i18n="contact.form.types.materials">新材料</option>
+                  <option value="electronics" data-i18n="contact.form.types.electronics">消费电子</option>
+                  <option value="other" data-i18n="contact.form.types.other">其他</option>
+                </select>
+                <div class="input-glow"></div>
+              </div>
+              <div class="form-group">
+                <textarea data-i18n-placeholder="contact.form.message" placeholder="您的需求和问题" rows="4" required></textarea>
+                <div class="input-glow"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <span data-i18n="contact.form.submit">获取咨询</span>
+                <div class="btn-glow"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="./images/logo-nav-1.png" alt="SuperLink Consulting" class="footer-logo-img">
+          <p data-i18n="footer.description">极致链接，专注助力内地科创企业高效拓展香港市场</p>
+
+          <img src="images/qrcode.png" alt="二维码" class="qrcode"></img>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4 data-i18n="footer.services.title">核心服务</h4>
+            <a href="#services" data-i18n="footer.services.recruitment">人才招聘</a>
+            <a href="#services" data-i18n="footer.services.compliance">薪酬合规</a>
+            <a href="#services" data-i18n="footer.services.management">团队管理</a>
+            <a href="#services" data-i18n="footer.services.remote">远程雇佣</a>
+          </div>
+          <div class="link-group">
+            <h4 data-i18n="footer.about.title">关于我们</h4>
+            <a href="#about" data-i18n="footer.about.company">公司介绍</a>
+            <a href="#team" data-i18n="footer.about.team">专家团队</a>
+            <a href="#contact" data-i18n="footer.about.contact">联系我们</a>
+          </div>
+          <div class="link-group">
+            <h4 data-i18n="footer.resources.title">实用资源</h4>
+            <a href="#guide" data-i18n="footer.resources.guide">香港落地指南</a>
+            <a href="practical-guide.html" data-i18n="footer.resources.practical">实战指南</a>
+            <a href="#" data-i18n="footer.resources.handbook">合规手册下载</a>
+            <a href="#advantages" data-i18n="footer.resources.advantages">服务优势</a>
+            <a href="#target-clients" data-i18n="footer.resources.clients">适用企业</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2025 SuperLink Consulting. 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: #ff6b35;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: #ff4500;
+      transform: translateY(-3px);
+    }
+
+    /* 浮动语言切换器样式 */
+    .floating-language-switcher {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    .floating-language-switcher .current-lang {
+      width: 50px;
+      height: 50px;
+      background: white;
+      border: 2px solid rgba(255, 107, 53, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .floating-language-switcher .current-lang:hover {
+      background: rgba(255, 107, 53, 0.05);
+      border-color: var(--primary-red);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .floating-language-switcher .current-lang img {
+      width: 24px;
+      height: 18px;
+      border-radius: 3px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    /* 隐藏不需要的元素 */
+    .floating-language-switcher .current-lang span,
+    .floating-language-switcher .arrow-down,
+    .floating-language-switcher .lang-dropdown {
+      display: none;
+    }
+  </style>
+  <!-- 浮动语言切换器 -->
+  <div class="floating-language-switcher language-switcher">
+    <button class="current-lang" data-current-lang="zh">
+      <img src="./images/cn.png" alt="Chinese">
+    </button>
+  </div>
+
+  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    ↑
+  </div>
+  <script src="./js/translations.js"></script>
+  <script src="./js/language-switcher.js"></script>
+</body>
+
 </html>
