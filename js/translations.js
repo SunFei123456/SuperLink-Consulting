@@ -179,7 +179,8 @@ const translations = {
                         "零售业务（中药材/动物寄养牌照）",
                         "活动管理（公众娱乐/彩票牌照）",
                         "专业服务（律师/会计师执照）"
-                    ]
+                    ],
+                    suffix: "的业务，需要申请执照"
                 }
             },
             risk2: {
@@ -572,7 +573,8 @@ const translations = {
                         "Retail Business (Chinese Medicine/Animal Boarding Licenses)",
                         "Event Management (Public Entertainment/Lottery Licenses)",
                         "Professional Services (Lawyer/Accountant Licenses)"
-                    ]
+                    ],
+                    suffix: " business requires licenses"
                 }
             },
             risk2: {
