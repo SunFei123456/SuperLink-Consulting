@@ -59,7 +59,7 @@ if (contactForm) {
         try {
             console.log('发送数据:', formData);
           
-            await fetch('https://script.google.com/macros/s/AKfycbwTk1_X-9DMIZpZCNsb7fdXxpMKA8kQDgs2pcB52wZrcS2aDU1g2Kb6kcYOH3ZJD8hw9A/exec', {
+            await fetch('https://script.google.com/macros/s/AKfycbxfuQv0Hqr5nPjnBz5qHy32mz-aiq1iaxsDMdpgFU82Q1pUaezszZ5AirxJ1q1KhX4a7g/exec', {
                 method: 'POST',
                
                 headers: {
