@@ -1,6 +1,8 @@
 // 多语言翻译配置
 const translations = {
     zh: {
+        // 全局通用
+        knowMore: '了解详细',
         nav: {
             home: '首页',
             about: '关于我们',
@@ -395,6 +397,8 @@ const translations = {
         // 这里可以继续添加其他部分的翻译
     },
     en: {
+        // Global common
+        knowMore: 'Learn More',
         nav: {
             home: 'Home',
             about: 'About Us',

@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof translationsPracticalGuide !== 'undefined') {
         deepMerge(translations, translationsPracticalGuide);
     }
+    
+    if (typeof translationsServicesDetails !== 'undefined') {
+        deepMerge(translations, translationsServicesDetails);
+    }
 
     // 语言切换相关元素
     const currentLangBtn = document.querySelector('.current-lang');
