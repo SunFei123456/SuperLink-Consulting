@@ -1,5 +1,24 @@
+// 深度合并对象
+function deepMerge(target, source) {
+    for (const key in source) {
+        if (source.hasOwnProperty(key)) {
+            if (source[key] instanceof Object && key in target && target[key] instanceof Object) {
+                deepMerge(target[key], source[key]);
+            } else {
+                target[key] = source[key];
+            }
+        }
+    }
+    return target;
+}
+
 // 语言切换主逻辑
 document.addEventListener('DOMContentLoaded', function () {
+    // 如果存在页面特定的翻译，则进行合并
+    if (typeof translationsPracticalGuide !== 'undefined') {
+        deepMerge(translations, translationsPracticalGuide);
+    }
+
     // 语言切换相关元素
     const currentLangBtn = document.querySelector('.current-lang');
     
@@ -23,6 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
             
             // 保存语言选择
             localStorage.setItem('selectedLanguage', newLang);
+            
+            // 触发语言变更事件，通知其他组件更新
+            const languageChangedEvent = new CustomEvent('languageChanged', {
+                detail: { language: newLang }
+            });
+            document.dispatchEvent(languageChangedEvent);
         });
     }
 
