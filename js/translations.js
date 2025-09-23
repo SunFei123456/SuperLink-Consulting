@@ -43,20 +43,20 @@ const translations = {
             feature3Tag: '省钱'
         },
         targetClients: {
-            badge: '目标服务客户',
+            badge: '目标客户',
             title: '专注服务科创企业',
-            subtitle: '深度理解科创企业的业务特点和人才需求，提供精准匹配的HR服务',
+            subtitle: '深度理解科创企业的业务特点和人才需求，提供精准匹配的人力资源服务',
             scaleTitle: '规模',
             scaleDesc: '员工 0-200人的企业',
             needsTitle: '需求痛点',
-            needsDesc: '香港本地没有HR,但需要开展业务,需要高性价比的做好人才招募,公司管理体系的搭建。',
+            needsDesc: '香港本地没有人力资源,但需要开展业务,需要高性价比的做好人才招募,公司管理体系的搭建。',
             industryTitle: '行业',
             industryDesc: '科技企业:机器人,AI,消费电子,新材料,生物医药各类专业服务公司'
         },
         services: {
             badge: '核心服务',
-            title: '一站式HR管家服务',
-            subtitle: '从人才诊断到团队优化的全周期HR解决方案',
+            title: '一站式人力资源管家服务',
+            subtitle: '从人才诊断到团队优化的全周期人力资源解决方案',
             service1: {
                 title: '精准诊断',
                 subtitle: '锚定团队缺口与战略目标',
@@ -76,13 +76,13 @@ const translations = {
                 desc1: '支持跨境员工招聘、远程办公政策设计与合规支持。',
                 desc2: '具备跨境服务能力（如外籍员工签证支持）助力企业布局亚洲市场。'
             },
-            pricingTitle: '服务价格',
-            pricing1Title: '半托管服务',
-            pricing1Price: '10万港币/年',
-            pricing1Desc: '不包含人才招募服务',
-            pricing2Title: '全托管服务',
-            pricing2Price: '20万港币/年',
-            pricing2Desc: '包含人才招募服务'
+            // pricingTitle: '服务价格',
+            // pricing1Title: '半托管服务',
+            // pricing1Price: '10万港币/年',
+            // pricing1Desc: '不包含人才招募服务',
+            // pricing2Title: '全托管服务',
+            // pricing2Price: '20万港币/年',
+            // pricing2Desc: '包含人才招募服务'
         },
         contact: {
             badge: '立即咨询',
@@ -468,13 +468,13 @@ const translations = {
                 desc1: 'Support cross-border employee recruitment, remote work policy design and compliance support.',
                 desc2: 'With cross-border service capabilities (such as foreign employee visa support) to help companies expand into Asian markets.'
             },
-            pricingTitle: 'Service Pricing',
-            pricing1Title: 'Semi-Managed Service',
-            pricing1Price: 'HK$100K/year',
-            pricing1Desc: 'Excluding talent recruitment services',
-            pricing2Title: 'Fully-Managed Service',
-            pricing2Price: 'HK$200K/year',
-            pricing2Desc: 'Including talent recruitment services'
+            // pricingTitle: 'Service Pricing',
+            // pricing1Title: 'Semi-Managed Service',
+            // pricing1Price: 'HK$100K/year',
+            // pricing1Desc: 'Excluding talent recruitment services',
+            // pricing2Title: 'Fully-Managed Service',
+            // pricing2Price: 'HK$200K/year',
+            // pricing2Desc: 'Including talent recruitment services'
         },
         contact: {
             badge: 'Contact Now',

@@ -7,6 +7,7 @@
 }
 
 .client-card {
+    height: 14rem;
     background: white;
     padding: 2rem;
     border-radius: 20px;
@@ -15,16 +16,13 @@
     text-align: center;
 }
 
-.client-card.featured {
-    transform: scale(1.1);
-    z-index: 10;
-}
+
 
 .client-card .card-header h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--dark-gray);
+    color: var(--primary-red);
 }
 
 .client-card .card-content p {
