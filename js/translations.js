@@ -16,23 +16,19 @@ const translations = {
         },
         hero: {
             badge: '极致链接 SuperLink Consulting',
-            title: '内地企业落地香港<br />一站式HR服务专家',
-            subtitle: '专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式HR解决方案',
+            title: '内地企业落地香港<br />一站式人力资源服务专家',
+            subtitle: '专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式人力资源解决方案',
             btnPrimary: '立即咨询',
-            btnSecondary: '查看合规手册',
             stats: {
-                experience: '10年',
-                experienceLabel: '人力资源管理经验',
+                experienceLabel: '人力资源专家为您服务',
                 service: '7×24h',
-                serviceLabel: '快速响应服务',
                 concept: '省心 | 省事 | 省钱',
-                conceptLabel: '三省服务理念'
             }
         },
         about: {
             badge: '关于我们',
             title: '极致链接 SuperLink Consulting',
-            subtitle: '专注助力内地科创企业高效拓展香港市场，团队成员横跨深港，具有20年内地科技企业人力资源管理经验',
+            subtitle: '专注助力内地科创企业高效拓展香港市场，<br> 团队成员横跨深港，<br>20年以上内地科技企业人力资源管理经验',
             founderName: '郑楠',
             founderTitle: '创始人 & CEO',
             careerTitle: '职业身份与经历',
@@ -415,20 +411,16 @@ const translations = {
             title: 'Services for Mainland Enterprises Establishing in Hong Kong',
             subtitle: 'We focus on helping mainland tech startups efficiently expand into the Hong Kong market, providing one-stop HR solutions including cross-border recruitment, payroll compliance, and team management.',
             btnPrimary: 'Contact Now',
-            btnSecondary: 'View Compliance Manual',
             stats: {
-                experience: '10 Years',
-                experienceLabel: 'HR Management Experience',
+                experienceLabel: 'Human resources experts are at your service.',
                 service: '7×24h',
-                serviceLabel: 'Response',
                 concept: 'Worry-free | Hassle-free | Cost-effective',
-                conceptLabel: 'Three-Free Service Philosophy'
             }
         },
         about: {
             badge: 'About Us',
             title: 'SuperLink Consulting',
-            subtitle: 'Focused on helping mainland tech companies efficiently expand into Hong Kong market, with team members spanning Shenzhen and Hong Kong, having 20 years of HR management experience in mainland tech companies',
+            subtitle: 'Focused on helping mainland tech companies efficiently expand into Hong Kong market, <br> with team members spanning Shenzhen and Hong Kong, <br> having 20 years of HR management experience in mainland tech companies',
             founderName: 'Zheng Nan',
             founderTitle: 'Founder & CEO',
             careerTitle: 'Professional Identity & Experience',

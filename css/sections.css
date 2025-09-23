@@ -1,12 +1,14 @@
 /* About Section Enhancements */
 .about {
+  position: relative;
   background: var(--light-gray);
 }
 
 .zhengnan{
-    position: absolute;
-    left: 10px;
-    width: 300px;
+   position: absolute;
+  left: 40px;
+  width: 160px;
+  bottom: 120px;
 }
 
 
