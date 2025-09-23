@@ -19,6 +19,7 @@ const translations = {
             title: '内地企业落地香港<br />一站式人力资源服务专家',
             subtitle: '专注助力内地科创企业高效拓展香港市场，提供跨境招聘、薪酬合规、团队管理等一站式人力资源解决方案',
             btnPrimary: '立即咨询',
+            btnDesc: '一键咨询，获取落地香港实战手册!',
             stats: {
                 experienceLabel: '人力资源专家为您服务',
                 service: '7×24h',
@@ -414,6 +415,7 @@ const translations = {
             title: 'Services for Mainland Enterprises Establishing in Hong Kong',
             subtitle: 'We focus on helping mainland tech startups efficiently expand into the Hong Kong market, providing one-stop HR solutions including cross-border recruitment, payroll compliance, and team management.',
             btnPrimary: 'Contact Now',
+            btnDesc: 'One-click consultation to get the Hong Kong landing practical guide!',
             stats: {
                 experienceLabel: 'Human resources experts are at your service.',
                 service: '7×24h',

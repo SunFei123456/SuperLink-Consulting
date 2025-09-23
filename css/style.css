@@ -200,10 +200,30 @@
 
 .hero-actions {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
+}
+
+.hero-btn-desc {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-red);
+    text-align: left;
+    max-width: 300px;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero-btn-desc::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-size: 1rem;
 }
 
 .hero-stats {

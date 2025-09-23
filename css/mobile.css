@@ -248,9 +248,10 @@
   }
 
   .hero-stats {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem !important;
+  }
+  .stat-number {
+    font-size: 1rem !important;
   }
 
   .visual-sphere {
@@ -434,11 +435,11 @@
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .btn {
@@ -463,19 +464,27 @@
   }
 
   .btn {
-    width: 100%;
     max-width: 280px;
+    margin:  0 auto;
+  }
+  .hero-btn-desc {
+    font-size: 0.85rem !important;
+    margin: 0 auto !important;
   }
 
+
   .contact-form {
-    padding: 1.5rem;
+    padding: 1rem !important;
+  }
+  .expert-profile{
+    padding: 1.2rem !important;
   }
 
   .feature-card,
   .service-card,
   .team-member,
   .advantage-card {
-    padding: 1.5rem;
+    padding: 1rem !important;
   }
   .zhengnan{
     display: none;
