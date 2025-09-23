@@ -9,7 +9,7 @@ const translations = {
             'target-clients': '服务对象',
             services: '核心服务',
             guide: '香港落地指南',
-            practicalGuide: '实战指南',
+            hrservice: '管家服务',
             team: '专家团队',
             advantages: '竞争优势',
             contact: '立即咨询'
@@ -86,11 +86,10 @@ const translations = {
         },
         contact: {
             badge: '立即咨询',
-            title: '填写信息获取咨询，我们做你香港人力管家',
-            subtitle: '获取咨询，获取专业的HR服务方案',
+            title: '填写信息，让我们做你的香港人力管家',
             company: {
                 title: '公司名称',
-                desc: 'SuperLink Consulting 执一人力资源咨询有限公司。'
+                desc: '执一人力资源咨询有限公司 SuperLink Consulting Ltd'
             },
             email: {
                 title: '邮箱联系',
@@ -99,6 +98,10 @@ const translations = {
             phone: {
                 title: '电话咨询',
                 desc: '00852 65245118'
+            },
+            address: {
+                title: '公司地址',
+                desc: '香港九龙弥敦道750号始创中心1501'
             },
             form: {
                 title: '联系我们',
@@ -254,7 +257,7 @@ const translations = {
         advantages: {
             badge: "竞争优势",
             title: "为什么选择SuperLink",
-            subtitle: "专业、高效、合规的一站式HR服务优势",
+            subtitle: "专业、高效、合规的一站式人力资源服务优势",
             advantage1: {
                 title: "本地交付",
                 desc: "核心团队汇聚香港本地人力资源专家，拥有实战验证的初创企业成长方法论。凭借丰富行业经验，全程护航企业从初创到规模化发展。"
@@ -401,7 +404,7 @@ const translations = {
             'target-clients': 'Target Clients',
             services: 'Services',
             guide: 'Landing Guide',
-            practicalGuide: 'Guide',
+            hrservice: 'Guide',
             team: 'Team',
             advantages: 'Advantages',
             contact: 'Contact'
@@ -478,8 +481,7 @@ const translations = {
         },
         contact: {
             badge: 'Contact Now',
-            title: 'Fill in the information to get consultation, We\'ll Be Your Hong Kong HR Butler',
-            subtitle: 'Contact us and get professional HR service solutions',
+            title: 'Fill in the information and let us be your human resource manager in Hong Kong.',
             company: {
                 title: 'Company Name',
                 desc: 'SuperLink Consulting Executive HR Consulting Ltd.'
@@ -491,6 +493,10 @@ const translations = {
             phone: {
                 title: 'Phone Consultation',
                 desc: '00852 65245118'
+            },
+            address: {
+                title: 'Company Address',
+                desc: 'Room 1501, Pioneer Centre, 750 Nathan Road, Kowloon, Hong Kong'
             },
             form: {
                 title: 'Contact Us',
@@ -782,6 +788,6 @@ const translations = {
             },
             copyright: '© 2025 SuperLink Consulting. All rights reserved'
         }
-        // 这里可以继续添加其他部分的英文翻译
+        
     }
 };

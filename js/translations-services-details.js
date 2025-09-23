@@ -1,18 +1,8 @@
 const translationsServicesDetails = {
     zh: {
-        pageTitle: 'HR管家服务详情 - SuperLink Consulting',
-        nav: {
-            home: '首页',
-            about: '关于我们',
-            targetClients: '服务对象',
-            services: '核心服务',
-            guide: '香港落地指南',
-            team: '专家团队',
-            advantages: '竞争优势',
-            contact: '立即咨询'
-        },
         header: {
-            title: 'HR管家的每月工作内容',
+            hrservice: '管家服务',
+            title: '人力资源管家的每月工作内容',
             subtitle: '我们如何通过精细化、全方位的月度服务，确保您的香港团队人力资源管理合规、高效、无忧。'
         },
         card1: {
@@ -90,18 +80,8 @@ const translationsServicesDetails = {
         }
     },
     en: {
-        pageTitle: 'HR Butler Service Details - SuperLink Consulting',
-        nav: {
-            home: 'Home',
-            about: 'About Us',
-            targetClients: 'Target Clients',
-            services: 'Services',
-            guide: 'Landing Guide',
-            team: 'Team',
-            advantages: 'Advantages',
-            contact: 'Contact'
-        },
         header: {
+            hrservice: 'HR Butler',
             title: 'Monthly Work Content of HR Butler',
             subtitle: 'How we ensure your Hong Kong team\'s human resources management is compliant, efficient, and worry-free through refined and comprehensive monthly services.'
         },
@@ -152,31 +132,6 @@ const translationsServicesDetails = {
             title: 'Notes',
             salaryUpdates: '<strong>Salary Updates:</strong> Need to regularly monitor the latest guidelines for Employment Ordinance, tax ordinances, and minimum wage.',
             dataSecurity: '<strong>Data Security:</strong> Employee compensation is personal privacy information, complying with the Personal Data (Privacy) Ordinance.'
-        },
-        footer: {
-            description: 'SuperLink, focused on helping mainland tech companies efficiently expand into the Hong Kong market',
-            services: {
-                title: 'Core Services',
-                recruitment: 'Talent Recruitment',
-                compliance: 'Payroll Compliance',
-                management: 'Team Management',
-                remote: 'Remote Employment'
-            },
-            about: {
-                title: 'About Us',
-                company: 'Company Introduction',
-                team: 'Expert Team',
-                contact: 'Contact Us'
-            },
-            resources: {
-                title: 'Practical Resources',
-                guide: 'HK Landing Guide',
-                practical: 'Practical Guide',
-                handbook: 'Compliance Handbook Download',
-                advantages: 'Service Advantages',
-                clients: 'Applicable Enterprises'
-            },
-            copyright: '© 2025 SuperLink Consulting. All rights reserved'
         }
     }
 };

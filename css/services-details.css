@@ -1,7 +1,6 @@
 /* services-details.css - User's Grid Design */
 .service-details-section {
-    padding: 160px 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 138, 101, 0.05));
 }
 
 .service-details-section .section-header {
@@ -22,16 +21,16 @@
     margin: 0 auto;
 }
 
-.details-grid {
+.service-details-section .details-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 30px;
 }
 
-.detail-card {
+.service-details-section .detail-card {
     background-color: #fff;
+    border: 1px solid rgba(255, 107, 53, 0.1);
     border-radius: 12px;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.07);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -39,25 +38,25 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.detail-card:hover {
+.service-details-section .detail-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
-.card-header {
+.service-details-section .card-header {
     padding: 20px 25px;
     position: relative;
     z-index: 1;
 }
 
-.card-header h3 {
+.service-details-section .card-header h3 {
     color: rgba(200, 68, 66, 0.9);
     margin: 0;
     font-size: 1.4rem;
     font-weight: 600;
 }
 
-.card-number {
+.service-details-section .card-number {
     position: absolute;
     top: -15px;
     right: 5px;
@@ -68,18 +67,18 @@
     user-select: none;
 }
 
-.card-content {
+.service-details-section .card-content {
     padding: 30px 25px;
     flex-grow: 1;
 }
 
-.card-content ul {
+.service-details-section .card-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.card-content ul li {
+.service-details-section .card-content ul li {
     margin-bottom: 12px;
     line-height: 1.7;
     color: #555;
@@ -87,11 +86,11 @@
     position: relative;
 }
 
-.card-content ul li:last-child {
+.service-details-section .card-content ul li:last-child {
     margin-bottom: 0;
 }
 
-.card-content ul li::before {
+.service-details-section .card-content ul li::before {
     content: '•';
     color: #fa504d;
     position: absolute;
@@ -100,12 +99,12 @@
     top: 1px;
 }
 
-.card-content ul ul {
+.service-details-section .card-content ul ul {
     padding-left: 15px;
     margin-top: 8px;
 }
 
-.card-content ul ul li {
+.service-details-section .card-content ul ul li {
     font-size: 0.95em;
 }
 

@@ -768,6 +768,7 @@ section {
     margin-bottom: 1rem;
     color: var(--dark-gray);
     letter-spacing: -0.02em;
+    line-height: 2.5rem;
 }
 
 .contact-info p {
@@ -781,6 +782,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .contact-method {
