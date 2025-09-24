@@ -3,7 +3,7 @@ const translationsServicesDetails = {
         header: {
             hrservice: '管家服务',
             title: '人力资源管家的每月工作内容',
-            subtitle: '我们如何通过精细化、全方位的月度服务，确保您的香港团队人力资源管理合规、高效、无忧。'
+            subtitle: '我们如何通过精细化、全方位的月度服务，确保您的香港团队人力资源管理合规、高效、无忧'
         },
         card1: {
             title: '工资计算与核对',

@@ -2,7 +2,7 @@
 
 /* Navigation Mobile */
 @media (max-width: 768px) {
-  .stat-item{
+  .stat-item {
     text-align: center !important;
   }
   .navbar {
@@ -58,7 +58,7 @@
   .nav-toggle span {
     width: 100%;
     height: 3px;
-    background: var( --primary-red);
+    background: var(--primary-red);
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -133,7 +133,7 @@
     animation: fadeIn 0.3s ease forwards;
   }
   .nav-link.active {
-    color: var( --primary-red);
+    color: var(--primary-red);
     background: none;
     font-weight: 600;
   }
@@ -251,7 +251,7 @@
     gap: 1rem;
   }
   .stat-number {
-    font-size: 1rem ;
+    font-size: 1rem;
   }
 
   .visual-sphere {
@@ -266,9 +266,9 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-      .zhengnan{
+  .zhengnan {
     display: none;
-}
+  }
 
   .founder-profile {
     padding: 2rem;
@@ -311,7 +311,6 @@
   .experience-timeline {
     padding-left: 1.5rem;
   }
-
 }
 
 /* Target Clients Mobile */
@@ -403,6 +402,12 @@
   }
 }
 
+  .zhengnan {
+    display: block;
+    max-width: 120px;
+    left: 10px;
+  }
+
 /* Contact Mobile */
 @media (max-width: 768px) {
   .contact-wrapper {
@@ -423,13 +428,12 @@
   }
 }
 
-
 /* General Mobile Adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
-  .expert-intro h2{
+  .expert-intro h2 {
     font-size: 1.5rem;
   }
 
@@ -438,7 +442,7 @@
   }
 
   .section-title {
-    font-size: 1.8rem  !important;
+    font-size: 1.8rem !important;
   }
 
   .section-subtitle {
@@ -449,9 +453,9 @@
     padding: 14px 28px;
     font-size: 0.9rem;
   }
-    .zhengnan{
+  .zhengnan {
     display: none;
-}
+  }
 }
 
 /* Small Mobile */
@@ -468,29 +472,24 @@
 
   .btn {
     max-width: 280px;
-    margin:  0 auto;
+    margin: 0 auto;
   }
   .hero-btn-desc {
     font-size: 0.85rem !important;
     margin: 0 auto !important;
   }
 
-
   .contact-form {
     padding: 1rem !important;
   }
-  .expert-profile{
+  .expert-profile {
     padding: 1.2rem !important;
   }
 
-  .zhengnan{
+  .zhengnan {
     display: none;
+  }
 }
-}
-
-
-
-
 
 /* 请统一添加ipad 平板端的样式 */
 /* iPad / Tablet styles: target widths between 769px and 1024px */
@@ -511,13 +510,10 @@
     width: 100px;
   }
 
-  .hero{
+  .hero {
     min-height: 55vh;
   }
 
-  
-
-  
   /* Hero layout: two columns on tablet */
   .hero .container {
     grid-template-columns: 1fr 420px !important;
@@ -593,7 +589,7 @@
   }
 
   /* Keep zhengnan image visible on tablets */
-  .zhengnan{
+  .zhengnan {
     display: block;
     max-width: 120px;
     left: 0px;
@@ -612,7 +608,6 @@
   .highlight-content {
     font-size: 1rem;
   }
-
 
   /* .service-card.featured 占据两个 */
   .service-card.featured {
