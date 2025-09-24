@@ -248,10 +248,10 @@
   }
 
   .hero-stats {
-    gap: 1rem !important;
+    gap: 1rem;
   }
   .stat-number {
-    font-size: 1rem !important;
+    font-size: 1rem ;
   }
 
   .visual-sphere {
@@ -429,13 +429,16 @@
   .container {
     padding: 0 16px;
   }
+  .expert-intro h2{
+    font-size: 1.5rem;
+  }
 
   section {
     padding: 60px 0;
   }
 
   .section-title {
-    font-size: 2rem !important;
+    font-size: 1.8rem  !important;
   }
 
   .section-subtitle {
@@ -480,15 +483,154 @@
     padding: 1.2rem !important;
   }
 
-  .feature-card,
-  .service-card,
-  .team-member,
-  .advantage-card {
-    padding: 1rem !important;
-  }
   .zhengnan{
     display: none;
 }
 }
 
 
+
+
+
+/* 请统一添加ipad 平板端的样式 */
+/* iPad / Tablet styles: target widths between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* container padding slightly larger than mobile */
+  .container {
+    padding: 0 28px;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  /* Navbar adjustments for tablet */
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-brand img {
+    width: 100px;
+  }
+
+  .hero{
+    min-height: 55vh;
+  }
+
+  
+
+  
+  /* Hero layout: two columns on tablet */
+  .hero .container {
+    grid-template-columns: 1fr 420px !important;
+    align-items: center;
+    gap: 0 !important;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.08;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .visual-sphere {
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  /* About / grids: prefer two columns */
+  .about-grid,
+  .services-grid,
+  .team-grid,
+  .advantages-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .founder-profile,
+  .feature-card,
+  .service-card,
+  .team-member,
+  .advantage-card {
+    padding: 1.6rem;
+  }
+
+  /* Contact form and other form rows */
+  .contact-wrapper {
+    grid-template-columns: 1fr 420px;
+    gap: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .btn {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+  }
+
+  /* Adjust stat numbers and hero stats */
+  .stat-number {
+    font-size: 1.2rem !important;
+  }
+
+  /* Slightly increase spacing for readability on tablets */
+  section {
+    padding: 90px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem !important;
+  }
+
+  /* Keep zhengnan image visible on tablets */
+  .zhengnan{
+    display: block;
+    max-width: 120px;
+    left: 0px;
+  }
+
+  /* Ensure pricing grid looks good on tablet */
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  /* Slight tweaks for readability */
+  .mission-content,
+  .founder-highlights,
+  .highlight-content {
+    font-size: 1rem;
+  }
+
+
+  /* .service-card.featured 占据两个 */
+  .service-card.featured {
+    grid-column: span 2;
+  }
+
+  /* risk-grid 最后一个risk-card 占据两个 */
+  .risk-grid .risk-card:last-child {
+    grid-column: span 2;
+  }
+
+  /* compliance-grid 的 最后一个compliance-item 占据三个 */
+  .compliance-grid .compliance-item:last-child {
+    grid-column: span 3;
+  }
+
+  /* advantages-grid 的 最后一个 advantage-card 占据两个 */
+  .advantages-grid .advantage-card:last-child {
+    grid-column: span 2;
+  }
+}
